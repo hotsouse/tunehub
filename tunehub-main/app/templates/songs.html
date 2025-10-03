@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>🎵 Песни</title>
+  <style>
+    body { font-family: "Segoe UI", sans-serif; background: #ffe6f0; color: #333; text-align: center; }
+    h1 { color: #d63384; }
+    ul { list-style: none; padding: 0; }
+    li { background: #fff; margin: 10px auto; padding: 10px; border-radius: 10px; width: 300px; display: flex; justify-content: space-between; align-items: center; }
+    button { background: #ff80bf; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; color: white; }
+    button:hover { background: #d63384; }
+  </style>
+</head>
+<body>
+  <h1>🎵 Список песен</h1>
+
+  <form id="addSongForm">
+    <input type="text" id="songTitle" placeholder="Название песни" required>
+    <input type="text" id="songArtist" placeholder="Исполнитель" required>
+    <button type="submit">Добавить</button>
+  </form>
+
+  <ul id="songList"></ul>
+
+  <script>
+    const apiUrl = "/api/songs";
+
+    async function loadSongs() {
+      const res = await fetch(apiUrl);
+      const songs = await res.json();
+      const list = document.getElementById("songList");
+      list.innerHTML = "";
+      songs.forEach(song => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          ${song.title} — ${song.artist}
+          <button onclick="deleteSong(${song.id})">Удалить</button>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    async function deleteSong(id) {
+      await fetch(`${apiUrl}/${id}`, { method: "DELETE" });
+      loadSongs();
+    }
+
+    document.getElementById("addSongForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const title = document.getElementById("songTitle").value;
+      const artist = document.getElementById("songArtist").value;
+
+      await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, artist })
+      });
+
+      e.target.reset();
+      loadSongs();
+    });
+
+    loadSongs();
+  </script>
+</body>
+</html>

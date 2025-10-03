@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>📀 Плейлисты</title>
+  <style>
+    body { font-family: "Segoe UI", sans-serif; background: #ffe6f0; color: #333; text-align: center; }
+    h1 { color: #d63384; }
+    ul { list-style: none; padding: 0; }
+    li { background: #fff; margin: 10px auto; padding: 10px; border-radius: 10px; width: 300px; display: flex; justify-content: space-between; align-items: center; }
+    button { background: #ff80bf; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; color: white; }
+    button:hover { background: #d63384; }
+  </style>
+</head>
+<body>
+  <h1>📀 Плейлисты</h1>
+
+  <form id="addPlaylistForm">
+    <input type="text" id="playlistName" placeholder="Название плейлиста" required>
+    <button type="submit">Создать</button>
+  </form>
+
+  <ul id="playlistList"></ul>
+
+  <script>
+    const apiUrl = "/api/playlists";
+
+    async function loadPlaylists() {
+      const res = await fetch(apiUrl);
+      const playlists = await res.json();
+      const list = document.getElementById("playlistList");
+      list.innerHTML = "";
+      playlists.forEach(pl => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          ${pl.name}
+          <button onclick="deletePlaylist(${pl.id})">Удалить</button>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    async function deletePlaylist(id) {
+      await fetch(`${apiUrl}/${id}`, { method: "DELETE" });
+      loadPlaylists();
+    }
+
+    document.getElementById("addPlaylistForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("playlistName").value;
+
+      await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name })
+      });
+
+      e.target.reset();
+      loadPlaylists();
+    });
+
+    loadPlaylists();
+  </script>
+</body>
+</html>
