@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "title": "dimple",
+    "artist": "bts",
+    "album": "i dont remeber",
+    "year": "2018",
+    "genre": "best"
+  },
+  {
+    "id": 2,
+    "title": "fg",
+    "artist": "gfdgfds",
+    "album": "fdsg",
+    "year": 2025,
+    "genre": "gfsd",
+    "duration": 3
+  }
+]

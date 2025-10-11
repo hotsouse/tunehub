@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}{{ 'Edit' if item else 'Add' }} {{ item_type|title }} - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>{{ 'Edit' if item else 'Add New' }} {{ item_type|title }}</h1>
+    <a href="{{ url_for('admin') }}" class="btn btn-secondary">← Back to Admin</a>
+</div>
+
+<div class="form-container">
+    <form method="POST" class="form">
+        {% if item_type == 'movie' %}
+        <div class="form-group">
+            <label for="title">🎬 Movie Title</label>
+            <input type="text" id="title" name="title" value="{{ item.title if item }}" required 
+                   placeholder="Enter movie title">
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="year">📅 Year</label>
+                <input type="number" id="year" name="year" value="{{ item.year if item }}" 
+                       min="1900" max="2030" required placeholder="2024">
+            </div>
+            
+            <div class="form-group">
+                <label for="genre">🎭 Genre</label>
+                <input type="text" id="genre" name="genre" value="{{ item.genre if item }}" required 
+                       placeholder="Action, Drama, Comedy...">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="rating">⭐ Rating (1-10)</label>
+                <input type="number" id="rating" name="rating" value="{{ item.rating if item }}" 
+                       min="1" max="10" step="0.1" required placeholder="8.5">
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">⏱️ Duration (minutes)</label>
+                <input type="number" id="duration" name="duration" value="{{ item.duration if item }}" 
+                       min="1" placeholder="120">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="director">🎥 Director</label>
+            <input type="text" id="director" name="director" value="{{ item.director if item }}" 
+                   placeholder="Director name">
+        </div>
+
+        <div class="form-group">
+            <label for="description">📝 Description</label>
+            <textarea id="description" name="description" rows="4" 
+                      placeholder="Movie plot description...">{{ item.description if item }}</textarea>
+        </div>
+
+        {% else %}
+        <div class="form-group">
+            <label for="title">🎵 Song Title</label>
+            <input type="text" id="title" name="title" value="{{ item.title if item }}" required 
+                   placeholder="Enter song title">
+        </div>
+
+        <div class="form-group">
+            <label for="artist">🎤 Artist</label>
+            <input type="text" id="artist" name="artist" value="{{ item.artist if item }}" required 
+                   placeholder="Artist name">
+        </div>
+
+        <div class="form-group">
+            <label for="album">💿 Album</label>
+            <input type="text" id="album" name="album" value="{{ item.album if item }}" required 
+                   placeholder="Album name">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="year">📅 Year</label>
+                <input type="number" id="year" name="year" value="{{ item.year if item }}" 
+                       min="1900" max="2030" required placeholder="2024">
+            </div>
+            
+            <div class="form-group">
+                <label for="genre">🎸 Genre</label>
+                <input type="text" id="genre" name="genre" value="{{ item.genre if item }}" required 
+                       placeholder="Rock, Pop, Jazz...">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="duration">⏱️ Duration (seconds)</label>
+            <input type="number" id="duration" name="duration" value="{{ item.duration if item }}" 
+                   min="1" placeholder="180">
+            <small class="form-help">Example: 180 seconds = 3:00 minutes</small>
+        </div>
+        {% endif %}
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">
+                {% if item %}
+                    ✏️ Update {{ item_type|title }}
+                {% else %}
+                    ➕ Add {{ item_type|title }}
+                {% endif %}
+            </button>
+            <a href="{{ url_for('admin') }}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

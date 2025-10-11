@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Panel - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>⚡ Admin Panel</h1>
+    <div class="admin-actions">
+        <a href="{{ url_for('add_movie') }}" class="btn btn-primary">Add Movie</a>
+        <a href="{{ url_for('add_music') }}" class="btn btn-secondary">Add Music</a>
+    </div>
+</div>
+
+<div class="admin-sections">
+    <div class="admin-section">
+        <h2>🎬 Movies ({{ movies|length }})</h2>
+        <div class="admin-list">
+            {% for movie in movies %}
+            <div class="admin-item">
+                <div class="item-info">
+                    <strong>{{ movie.title }}</strong> ({{ movie.year }}) - {{ movie.genre }} - ⭐ {{ movie.rating }}
+                </div>
+                <a href="{{ url_for('delete_movie', movie_id=movie.id) }}" class="btn btn-danger" onclick="return confirm('Delete this movie?')">Delete</a>
+            </div>
+            {% else %}
+            <p class="empty">No movies added yet.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="admin-section">
+        <h2>🎵 Music ({{ music|length }})</h2>
+        <div class="admin-list">
+            {% for track in music %}
+            <div class="admin-item">
+                <div class="item-info">
+                    <strong>{{ track.title }}</strong> by {{ track.artist }} - {{ track.album }} ({{ track.year }})
+                </div>
+                <a href="{{ url_for('delete_music', music_id=track.id) }}" class="btn btn-danger" onclick="return confirm('Delete this music track?')">Delete</a>
+            </div>
+            {% else %}
+            <p class="empty">No music added yet.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

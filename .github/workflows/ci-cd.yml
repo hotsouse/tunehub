@@ -1,0 +1,82 @@
+﻿name: Django CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_DB: test_db
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run migrations
+      env:
+        DEBUG: True
+        SECRET_KEY: test-secret-key-for-ci-cd
+        DB_NAME: test_db
+        DB_USER: postgres
+        DB_PASSWORD: password
+        DB_HOST: localhost
+        DB_PORT: 5432
+      run: |
+        python manage.py makemigrations
+        python manage.py migrate
+    
+    - name: Run tests
+      env:
+        DEBUG: True
+        SECRET_KEY: test-secret-key-for-ci-cd
+        DB_NAME: test_db
+        DB_USER: postgres
+        DB_PASSWORD: password
+        DB_HOST: localhost
+        DB_PORT: 5432
+      run: |
+        python manage.py test
+    
+    - name: Security check with Bandit
+      run: |
+        pip install bandit
+        bandit -r . -f html -o security_report.html || true
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Render deployment
+      run: |
+        echo \"Deployment to Render would happen here\"
+        # Add actual deployment commands for Render/Heroku

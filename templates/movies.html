@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Movies - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>🎬 Movie Collection</h1>
+    <a href="{{ url_for('add_movie') }}" class="btn btn-primary">Add New Movie</a>
+</div>
+
+<!-- Поиск и сортировка -->
+<div class="search-sort-container">
+    <form method="GET" class="search-form">
+        <input type="text" name="search" placeholder="Search movies by title, genre, director..." 
+               value="{{ search_query }}" class="search-input">
+        <button type="submit" class="btn btn-primary">Search</button>
+        {% if search_query %}
+            <a href="{{ url_for('movies') }}" class="btn btn-secondary">Clear</a>
+        {% endif %}
+    </form>
+    
+    <div class="sort-options">
+        <span>Sort by:</span>
+        <a href="{{ url_for('movies', search=search_query, sort='title', order='asc') }}" 
+           class="sort-btn {% if sort_by == 'title' and order == 'asc' %}active{% endif %}">Title A-Z</a>
+        <a href="{{ url_for('movies', search=search_query, sort='title', order='desc') }}" 
+           class="sort-btn {% if sort_by == 'title' and order == 'desc' %}active{% endif %}">Title Z-A</a>
+        <a href="{{ url_for('movies', search=search_query, sort='year', order='desc') }}" 
+           class="sort-btn {% if sort_by == 'year' and order == 'desc' %}active{% endif %}">Newest</a>
+        <a href="{{ url_for('movies', search=search_query, sort='rating', order='desc') }}" 
+           class="sort-btn {% if sort_by == 'rating' and order == 'desc' %}active{% endif %}">Top Rated</a>
+    </div>
+</div>
+
+<div class="grid">
+    {% for movie in movies %}
+    <div class="card">
+        <div class="card-header">
+            <h3>{{ movie.title }}</h3>
+            <div class="card-badges">
+                <span class="year">{{ movie.year }}</span>
+                {% if movie.id in favorites %}
+                <span class="favorite-badge">⭐ Favorite</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="card-body">
+            <p><strong>Genre:</strong> {{ movie.genre }}</p>
+            <p><strong>Rating:</strong> ⭐ {{ movie.rating }}/10</p>
+            {% if movie.director %}
+            <p><strong>Director:</strong> {{ movie.director }}</p>
+            {% endif %}
+            {% if movie.duration %}
+            <p><strong>Duration:</strong> {{ movie.duration }} min</p>
+            {% endif %}
+            {% if movie.description %}
+            <p class="description">{{ movie.description }}</p>
+            {% endif %}
+        </div>
+        <div class="card-actions">
+            <a href="{{ url_for('edit_movie', movie_id=movie.id) }}" class="btn btn-edit">✏️ Edit</a>
+            {% if movie.id in favorites %}
+                <a href="{{ url_for('remove_from_favorites', item_type='movie', item_id=movie.id) }}" 
+                   class="btn btn-danger">⭐ Remove Favorite</a>
+            {% else %}
+                <a href="{{ url_for('add_to_favorites', item_type='movie', item_id=movie.id) }}" 
+                   class="btn btn-favorite">⭐ Add to Favorites</a>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h3>🎬 No movies found</h3>
+        <p>Try changing your search criteria or add a new movie!</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('add_movie') }}" class="btn btn-primary">Add Movie</a>
+            <a href="{{ url_for('movies') }}" class="btn btn-secondary">Show All</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

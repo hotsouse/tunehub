@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Favorites - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>⭐ My Favorites</h1>
+</div>
+
+{% if movies or music %}
+    {% if movies %}
+    <div class="favorites-section">
+        <h2>🎬 Favorite Movies ({{ movies|length }})</h2>
+        <div class="grid">
+            {% for movie in movies %}
+            <div class="card">
+                <div class="card-header">
+                    <h3>{{ movie.title }}</h3>
+                    <div class="card-badges">
+                        <span class="year">{{ movie.year }}</span>
+                        <span class="favorite-badge">⭐ Favorite</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+                    <p><strong>Rating:</strong> ⭐ {{ movie.rating }}/10</p>
+                    {% if movie.director %}
+                    <p><strong>Director:</strong> {{ movie.director }}</p>
+                    {% endif %}
+                    {% if movie.duration %}
+                    <p><strong>Duration:</strong> {{ movie.duration }} min</p>
+                    {% endif %}
+                </div>
+                <div class="card-actions">
+                    <a href="{{ url_for('remove_from_favorites', item_type='movie', item_id=movie.id) }}" 
+                       class="btn btn-danger">🗑️ Remove</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if music %}
+    <div class="favorites-section">
+        <h2>🎵 Favorite Music ({{ music|length }})</h2>
+        <div class="grid">
+            {% for track in music %}
+            <div class="card">
+                <div class="card-header">
+                    <h3>{{ track.title }}</h3>
+                    <div class="card-badges">
+                        <span class="year">{{ track.year }}</span>
+                        <span class="favorite-badge">⭐ Favorite</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p><strong>Artist:</strong> {{ track.artist }}</p>
+                    <p><strong>Album:</strong> {{ track.album }}</p>
+                    <p><strong>Genre:</strong> {{ track.genre }}</p>
+                    {% if track.duration %}
+                    <p><strong>Duration:</strong> {{ (track.duration // 60) }}:{{ "%02d" % (track.duration % 60) }}</p>
+                    {% endif %}
+                </div>
+                <div class="card-actions">
+                    <a href="{{ url_for('remove_from_favorites', item_type='music', item_id=track.id) }}" 
+                       class="btn btn-danger">🗑️ Remove</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+{% else %}
+<div class="empty-state">
+    <h3>⭐ No favorites yet</h3>
+    <p>Start adding movies and music to your favorites collection!</p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('movies') }}" class="btn btn-primary">Browse Movies</a>
+        <a href="{{ url_for('music') }}" class="btn btn-secondary">Browse Music</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

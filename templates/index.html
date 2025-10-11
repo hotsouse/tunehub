@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <h1>Welcome to Movie & Music Catalog! 🎬🎵</h1>
+    <p>Your personal collection of favorite movies and music</p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('movies') }}" class="btn btn-primary">Browse Movies</a>
+        <a href="{{ url_for('music') }}" class="btn btn-secondary">Browse Music</a>
+        <a href="{{ url_for('admin') }}" class="btn btn-admin">Admin Panel</a>
+    </div>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h3>🎬 Movie Collection</h3>
+        <p>Manage your movie library with details like title, year, genre, and ratings</p>
+    </div>
+    <div class="feature-card">
+        <h3>🎵 Music Library</h3>
+        <p>Organize your music collection with artist, album, and genre information</p>
+    </div>
+    <div class="feature-card">
+        <h3>⚡ Easy Management</h3>
+        <p>Add, edit, and remove items through the intuitive admin panel</p>
+    </div>
+</div>
+{% endblock %}

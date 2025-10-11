@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Music - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>🎵 Music Library</h1>
+    <a href="{{ url_for('add_music') }}" class="btn btn-primary">Add New Music</a>
+</div>
+
+<!-- Поиск и сортировка -->
+<div class="search-sort-container">
+    <form method="GET" class="search-form">
+        <input type="text" name="search" placeholder="Search music by title, artist, album..." 
+               value="{{ search_query }}" class="search-input">
+        <button type="submit" class="btn btn-primary">Search</button>
+        {% if search_query %}
+            <a href="{{ url_for('music') }}" class="btn btn-secondary">Clear</a>
+        {% endif %}
+    </form>
+    
+    <div class="sort-options">
+        <span>Sort by:</span>
+        <a href="{{ url_for('music', search=search_query, sort='title', order='asc') }}" 
+           class="sort-btn {% if sort_by == 'title' and order == 'asc' %}active{% endif %}">Title A-Z</a>
+        <a href="{{ url_for('music', search=search_query, sort='title', order='desc') }}" 
+           class="sort-btn {% if sort_by == 'title' and order == 'desc' %}active{% endif %}">Title Z-A</a>
+        <a href="{{ url_for('music', search=search_query, sort='artist', order='asc') }}" 
+           class="sort-btn {% if sort_by == 'artist' and order == 'asc' %}active{% endif %}">Artist A-Z</a>
+        <a href="{{ url_for('music', search=search_query, sort='year', order='desc') }}" 
+           class="sort-btn {% if sort_by == 'year' and order == 'desc' %}active{% endif %}">Newest</a>
+    </div>
+</div>
+
+<div class="grid">
+    {% for track in music %}
+    <div class="card">
+        <div class="card-header">
+            <h3>{{ track.title }}</h3>
+            <div class="card-badges">
+                <span class="year">{{ track.year }}</span>
+                {% if track.id in favorites %}
+                <span class="favorite-badge">⭐ Favorite</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="card-body">
+            <p><strong>Artist:</strong> {{ track.artist }}</p>
+            <p><strong>Album:</strong> {{ track.album }}</p>
+            <p><strong>Genre:</strong> {{ track.genre }}</p>
+            {% if track.duration %}
+            <p><strong>Duration:</strong> {{ (track.duration // 60) }}:{{ "%02d" % (track.duration % 60) }}</p>
+            {% endif %}
+        </div>
+        <div class="card-actions">
+            <a href="{{ url_for('edit_music', music_id=track.id) }}" class="btn btn-edit">✏️ Edit</a>
+            {% if track.id in favorites %}
+                <a href="{{ url_for('remove_from_favorites', item_type='music', item_id=track.id) }}" 
+                   class="btn btn-danger">⭐ Remove Favorite</a>
+            {% else %}
+                <a href="{{ url_for('add_to_favorites', item_type='music', item_id=track.id) }}" 
+                   class="btn btn-favorite">⭐ Add to Favorites</a>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h3>🎵 No music found</h3>
+        <p>Try changing your search criteria or add new music to your library!</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('add_music') }}" class="btn btn-primary">Add Music</a>
+            <a href="{{ url_for('music') }}" class="btn btn-secondary">Show All</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
