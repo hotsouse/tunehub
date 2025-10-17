@@ -2,15 +2,19 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify, s
 import json
 import os
 from datetime import datetime
+import jwt
+from functools import wraps
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here'  # Для сессий
+app.config['SECRET_KEY'] = 'your-super-secret-jwt-key-change-this-in-production'
 
 # Папка для данных
 DATA_DIR = 'data'
 MOVIES_FILE = os.path.join(DATA_DIR, 'movies.json')
 MUSIC_FILE = os.path.join(DATA_DIR, 'music.json')
 FAVORITES_FILE = os.path.join(DATA_DIR, 'favorites.json')
+USERS_FILE = os.path.join(DATA_DIR, 'users.json')
 
 # Создаем папку для данных если ее нет
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -51,6 +55,21 @@ def init_data():
     if not os.path.exists(FAVORITES_FILE):
         with open(FAVORITES_FILE, 'w', encoding='utf-8') as f:
             json.dump({'movies': [], 'music': []}, f, ensure_ascii=False, indent=2)
+    
+    # Инициализация пользователей
+    if not os.path.exists(USERS_FILE):
+        sample_users = [
+            {
+                'id': 1,
+                'username': 'admin',
+                'password': generate_password_hash('admin123'),
+                'email': 'admin@example.com',
+                'role': 'admin',
+                'created_at': datetime.utcnow().isoformat()
+            }
+        ]
+        with open(USERS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(sample_users, f, ensure_ascii=False, indent=2)
 
 # Чтение данных
 def read_movies():
@@ -65,6 +84,10 @@ def read_favorites():
     with open(FAVORITES_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def read_users():
+    with open(USERS_FILE, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
 # Запись данных
 def write_movies(data):
     with open(MOVIES_FILE, 'w', encoding='utf-8') as f:
@@ -76,6 +99,10 @@ def write_music(data):
 
 def write_favorites(data):
     with open(FAVORITES_FILE, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def write_users(data):
+    with open(USERS_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 # Поиск и сортировка
@@ -112,6 +139,166 @@ def sort_items(items, sort_by, order='asc'):
     except (ValueError, TypeError):
         # Если возникает ошибка, возвращаем исходный список
         return items
+
+# Декоратор для проверки JWT токена
+def token_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = request.headers.get('Authorization')
+        if not token:
+            return jsonify({'message': 'Token is missing!'}), 401
+        
+        try:
+            token = token.split(' ')[1]  # Убираем 'Bearer '
+            data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+            current_user = next((user for user in read_users() if user['id'] == data['user_id']), None)
+            if not current_user:
+                return jsonify({'message': 'User not found!'}), 401
+        except jwt.ExpiredSignatureError:
+            return jsonify({'message': 'Token has expired!'}), 401
+        except jwt.InvalidTokenError:
+            return jsonify({'message': 'Token is invalid!'}), 401
+        except Exception as e:
+            return jsonify({'message': 'Token verification failed!'}), 401
+        
+        return f(current_user, *args, **kwargs)
+    return decorated
+
+# Декоратор для проверки роли администратора
+def admin_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = request.headers.get('Authorization')
+        if not token:
+            return jsonify({'message': 'Token is missing!'}), 401
+        
+        try:
+            token = token.split(' ')[1]
+            data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+            current_user = next((user for user in read_users() if user['id'] == data['user_id']), None)
+            
+            if not current_user or current_user.get('role') != 'admin':
+                return jsonify({'message': 'Admin access required!'}), 403
+                
+        except Exception as e:
+            return jsonify({'message': 'Token verification failed!'}), 401
+        
+        return f(current_user, *args, **kwargs)
+    return decorated
+
+# ==================== ЭНДПОИНТЫ АВТОРИЗАЦИИ ====================
+
+@app.route('/api/auth/signup', methods=['POST'])
+def signup():
+    try:
+        data = request.get_json()
+        if not data or not data.get('username') or not data.get('password') or not data.get('email'):
+            return jsonify({'message': 'Username, password and email are required!'}), 400
+        
+        users = read_users()
+        
+        # Проверяем, существует ли пользователь
+        if any(user['username'] == data['username'] for user in users):
+            return jsonify({'message': 'Username already exists!'}), 400
+        
+        if any(user['email'] == data['email'] for user in users):
+            return jsonify({'message': 'Email already exists!'}), 400
+        
+        new_user = {
+            'id': max([user['id'] for user in users], default=0) + 1,
+            'username': data['username'],
+            'password': generate_password_hash(data['password']),
+            'email': data['email'],
+            'role': 'user',
+            'created_at': datetime.utcnow().isoformat()
+        }
+        
+        users.append(new_user)
+        write_users(users)
+        
+        # Создаем токен для автоматического входа после регистрации
+        token = jwt.encode({
+            'user_id': new_user['id'],
+            'username': new_user['username'],
+            'exp': datetime.utcnow() + datetime.timedelta(hours=24)
+        }, app.config['SECRET_KEY'], algorithm='HS256')
+        
+        return jsonify({
+            'message': 'User created successfully!',
+            'token': token,
+            'user': {
+                'id': new_user['id'],
+                'username': new_user['username'],
+                'email': new_user['email'],
+                'role': new_user['role']
+            }
+        }), 201
+        
+    except Exception as e:
+        return jsonify({'message': 'Server error during registration'}), 500
+
+@app.route('/api/auth/login', methods=['POST'])
+def login():
+    try:
+        data = request.get_json()
+        if not data or not data.get('username') or not data.get('password'):
+            return jsonify({'message': 'Username and password are required!'}), 400
+        
+        users = read_users()
+        user = next((u for u in users if u['username'] == data['username']), None)
+        
+        if user and check_password_hash(user['password'], data['password']):
+            # Создаем JWT токен
+            token = jwt.encode({
+                'user_id': user['id'],
+                'username': user['username'],
+                'exp': datetime.utcnow() + datetime.timedelta(hours=24)
+            }, app.config['SECRET_KEY'], algorithm='HS256')
+            
+            return jsonify({
+                'message': 'Login successful!',
+                'token': token,
+                'user': {
+                    'id': user['id'],
+                    'username': user['username'],
+                    'email': user['email'],
+                    'role': user['role']
+                }
+            }), 200
+        
+        return jsonify({'message': 'Invalid credentials!'}), 401
+        
+    except Exception as e:
+        return jsonify({'message': 'Server error during login'}), 500
+
+@app.route('/api/auth/me', methods=['GET'])
+@token_required
+def get_current_user(current_user):
+    return jsonify({
+        'id': current_user['id'],
+        'username': current_user['username'],
+        'email': current_user['email'],
+        'role': current_user['role']
+    }), 200
+
+@app.route('/api/auth/users', methods=['GET'])
+@admin_required
+def get_all_users(current_user):
+    users = read_users()
+    # Не возвращаем пароли
+    safe_users = [
+        {
+            'id': user['id'],
+            'username': user['username'],
+            'email': user['email'],
+            'role': user['role'],
+            'created_at': user.get('created_at', '')
+        }
+        for user in users
+    ]
+    return jsonify(safe_users), 200
+
+# ==================== СУЩЕСТВУЮЩИЕ ЭНДПОИНТЫ ====================
 
 @app.route('/')
 def index():
@@ -342,6 +529,29 @@ def delete_music(music_id):
         write_favorites(favorites_data)
     
     return redirect(url_for('admin'))
+
+# Защищенные API эндпоинты
+@app.route('/api/protected', methods=['GET'])
+@token_required
+def protected_route(current_user):
+    return jsonify({'message': f'Hello {current_user["username"]}! This is protected data.'}), 200
+
+@app.route('/api/admin/stats', methods=['GET'])
+@admin_required
+def admin_stats(current_user):
+    movies = read_movies()
+    music = read_music()
+    users = read_users()
+    
+    stats = {
+        'total_movies': len(movies),
+        'total_music': len(music),
+        'total_users': len(users),
+        'admin_users': len([u for u in users if u.get('role') == 'admin']),
+        'regular_users': len([u for u in users if u.get('role') == 'user'])
+    }
+    
+    return jsonify(stats), 200
 
 if __name__ == '__main__':
     init_data()

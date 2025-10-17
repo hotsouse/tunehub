@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "scrypt:32768:8:1$U54OwbVJCZOgqQBF$78cd7bba084bbe4ca089fc54a17357e4c2f332189d86d7cc2941476dbc38e223d7f7c1e286f58eb444d0078f06c99454f3dd72600cedf9e4204374aa5e82cf1d",
+    "email": "admin@example.com",
+    "role": "admin",
+    "created_at": "2025-10-11T04:40:15.618505"
+  }
+]
