@@ -1,11 +1,10 @@
 # Открываем файл и добавляем содержимое
-@"
 Django==4.2.7
 djangorestframework==3.14.0
 django-cors-headers==4.3.1
 django-filter==23.3
-Pillow==10.0.1
-psycopg2-binary==2.9.7
+Pillow==11.0.0
 gunicorn==21.2.0
 whitenoise==6.6.0
-"@ | Out-File -FilePath requirements.txt -Encoding utf8
+drf-spectacular==0.27.2
+django-prometheus==2.3.1

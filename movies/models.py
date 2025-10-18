@@ -40,3 +40,14 @@ class Movie(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.release_year})"
+
+
+class Review(models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name="reviews")
+    user = models.ForeignKey('accounts.CustomUser', on_delete=models.CASCADE, related_name="movie_reviews")
+    rating = models.IntegerField()
+    comment = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.movie.title} - {self.user.username} ({self.rating})"

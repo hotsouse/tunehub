@@ -1,28 +1,343 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="hero">
-    <h1>Welcome to Movie & Music Catalog! 🎬🎵</h1>
-    <p>Your personal collection of favorite movies and music</p>
-    <div class="hero-buttons">
-        <a href="{{ url_for('movies') }}" class="btn btn-primary">Browse Movies</a>
-        <a href="{{ url_for('music') }}" class="btn btn-secondary">Browse Music</a>
-        <a href="{{ url_for('admin') }}" class="btn btn-admin">Admin Panel</a>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="text-center">
+        <h1 class="hero-title">Добро пожаловать в Медиатеку</h1>
+        <p class="hero-subtitle">Ваша персональная коллекция фильмов и музыки с умными рекомендациями</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="/movies/" class="btn-primary-glass">🎬 Фильмы</a>
+            <a href="/music/" class="btn-secondary-glass">🎵 Музыка</a>
+            {% if request.user.is_authenticated %}
+                <a href="/admin/" class="btn-glass">⚙️ Админ панель</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Personalized Collections -->
+<section class="carousel-container">
+    <h2 class="carousel-title">
+        <span>⭐</span> Рекомендуем вам
+    </h2>
+    <div class="carousel-scroll">
+        <div class="carousel-item">
+            <div class="media-card">
+                <img src="https://via.placeholder.com/280x300/1a1a1a/3b82f6?text=Фильм+1" alt="Фильм" class="media-card-poster">
+                <div class="media-card-content">
+                    <h3 class="media-card-title">Интерстеллар</h3>
+                    <div class="media-card-meta">
+                        <span class="media-card-year">2014</span>
+                        <div class="media-card-rating">
+                            <div class="star-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">8.6</span>
+                        </div>
+                    </div>
+                    <div class="media-card-genres">
+                        <span class="genre-tag">Фантастика</span>
+                        <span class="genre-tag">Драма</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="media-card">
+                <img src="https://via.placeholder.com/280x300/1a1a1a/10b981?text=Альбом+1" alt="Альбом" class="media-card-poster">
+                <div class="media-card-content">
+                    <h3 class="media-card-title">Random Access Memories</h3>
+                    <div class="media-card-meta">
+                        <span class="media-card-year">2013</span>
+                        <div class="media-card-rating">
+                            <div class="star-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                            <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">4.2</span>
+                        </div>
+                    </div>
+                    <div class="media-card-genres">
+                        <span class="genre-tag">Electronic</span>
+                        <span class="genre-tag">Disco</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="media-card">
+                <img src="https://via.placeholder.com/280x300/1a1a1a/8b5cf6?text=Фильм+2" alt="Фильм" class="media-card-poster">
+                <div class="media-card-content">
+                    <h3 class="media-card-title">Дюна</h3>
+                    <div class="media-card-meta">
+                        <span class="media-card-year">2021</span>
+                        <div class="media-card-rating">
+                            <div class="star-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">8.0</span>
+                        </div>
+                    </div>
+                    <div class="media-card-genres">
+                        <span class="genre-tag">Фантастика</span>
+                        <span class="genre-tag">Приключения</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="media-card">
+                <img src="https://via.placeholder.com/280x300/1a1a1a/ec4899?text=Альбом+2" alt="Альбом" class="media-card-poster">
+                <div class="media-card-content">
+                    <h3 class="media-card-title">folklore</h3>
+                    <div class="media-card-meta">
+                        <span class="media-card-year">2020</span>
+                        <div class="media-card-rating">
+                            <div class="star-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">4.8</span>
+                        </div>
+                    </div>
+                    <div class="media-card-genres">
+                        <span class="genre-tag">Indie Folk</span>
+                        <span class="genre-tag">Alternative</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="carousel-container">
+    <h2 class="carousel-title">
+        <span>🔥</span> Сейчас популярно
+    </h2>
+    <div class="carousel-scroll">
+        <div class="carousel-item">
+            <div class="media-card">
+                <img src="https://via.placeholder.com/280x300/1a1a1a/3b82f6?text=Популярный+1" alt="Фильм" class="media-card-poster">
+                <div class="media-card-content">
+                    <h3 class="media-card-title">Топ Ган: Мэверик</h3>
+                    <div class="media-card-meta">
+                        <span class="media-card-year">2022</span>
+                        <div class="media-card-rating">
+                            <div class="star-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">8.3</span>
+                        </div>
+                    </div>
+                    <div class="media-card-genres">
+                        <span class="genre-tag">Экшн</span>
+                        <span class="genre-tag">Драма</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="media-card">
+                <img src="https://via.placeholder.com/280x300/1a1a1a/10b981?text=Популярный+2" alt="Альбом" class="media-card-poster">
+                <div class="media-card-content">
+                    <h3 class="media-card-title">Midnights</h3>
+                    <div class="media-card-meta">
+                        <span class="media-card-year">2022</span>
+                        <div class="media-card-rating">
+                            <div class="star-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                            <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">4.1</span>
+                        </div>
+                    </div>
+                    <div class="media-card-genres">
+                        <span class="genre-tag">Pop</span>
+                        <span class="genre-tag">Synthpop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Navigation -->
+<nav class="filter-nav">
+    <div class="filter-buttons">
+        <button class="filter-btn active">Все</button>
+        <button class="filter-btn">🎬 Фильмы</button>
+        <button class="filter-btn">🎵 Музыка</button>
+        <button class="filter-btn">🆕 Новинки</button>
+        <button class="filter-btn">⭐ Топ рейтинга</button>
+    </div>
+</nav>
+
+<!-- Main Content Grid -->
+<div class="media-grid">
+    <div class="media-card">
+        <img src="https://via.placeholder.com/280x300/1a1a1a/3b82f6?text=Фильм+3" alt="Фильм" class="media-card-poster">
+        <div class="media-card-content">
+            <h3 class="media-card-title">Бегущий по лезвию 2049</h3>
+            <div class="media-card-meta">
+                <span class="media-card-year">2017</span>
+                <div class="media-card-rating">
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">8.0</span>
+                </div>
+            </div>
+            <div class="media-card-genres">
+                <span class="genre-tag">Фантастика</span>
+                <span class="genre-tag">Триллер</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="media-card">
+        <img src="https://via.placeholder.com/280x300/1a1a1a/10b981?text=Альбом+3" alt="Альбом" class="media-card-poster">
+        <div class="media-card-content">
+            <h3 class="media-card-title">After Hours</h3>
+            <div class="media-card-meta">
+                <span class="media-card-year">2020</span>
+                <div class="media-card-rating">
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">4.2</span>
+                </div>
+            </div>
+            <div class="media-card-genres">
+                <span class="genre-tag">R&B</span>
+                <span class="genre-tag">Pop</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="media-card">
+        <img src="https://via.placeholder.com/280x300/1a1a1a/8b5cf6?text=Фильм+4" alt="Фильм" class="media-card-poster">
+        <div class="media-card-content">
+            <h3 class="media-card-title">Паразиты</h3>
+            <div class="media-card-meta">
+                <span class="media-card-year">2019</span>
+                <div class="media-card-rating">
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">8.5</span>
+                </div>
+            </div>
+            <div class="media-card-genres">
+                <span class="genre-tag">Триллер</span>
+                <span class="genre-tag">Драма</span>
+            </div>
     </div>
 </div>
 
-<div class="features">
-    <div class="feature-card">
-        <h3>🎬 Movie Collection</h3>
-        <p>Manage your movie library with details like title, year, genre, and ratings</p>
+    <div class="media-card">
+        <img src="https://via.placeholder.com/280x300/1a1a1a/ec4899?text=Альбом+4" alt="Альбом" class="media-card-poster">
+        <div class="media-card-content">
+            <h3 class="media-card-title">Blonde</h3>
+            <div class="media-card-meta">
+                <span class="media-card-year">2016</span>
+                <div class="media-card-rating">
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">4.5</span>
+                </div>
+            </div>
+            <div class="media-card-genres">
+                <span class="genre-tag">Alternative R&B</span>
+                <span class="genre-tag">Art Pop</span>
+            </div>
+        </div>
     </div>
-    <div class="feature-card">
-        <h3>🎵 Music Library</h3>
-        <p>Organize your music collection with artist, album, and genre information</p>
+    
+    <div class="media-card">
+        <img src="https://via.placeholder.com/280x300/1a1a1a/3b82f6?text=Фильм+5" alt="Фильм" class="media-card-poster">
+        <div class="media-card-content">
+            <h3 class="media-card-title">Джокер</h3>
+            <div class="media-card-meta">
+                <span class="media-card-year">2019</span>
+                <div class="media-card-rating">
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">8.4</span>
+                </div>
+            </div>
+            <div class="media-card-genres">
+                <span class="genre-tag">Криминал</span>
+                <span class="genre-tag">Драма</span>
+            </div>
+        </div>
     </div>
-    <div class="feature-card">
-        <h3>⚡ Easy Management</h3>
-        <p>Add, edit, and remove items through the intuitive admin panel</p>
+    
+    <div class="media-card">
+        <img src="https://via.placeholder.com/280x300/1a1a1a/10b981?text=Альбом+5" alt="Альбом" class="media-card-poster">
+        <div class="media-card-content">
+            <h3 class="media-card-title">Lemonade</h3>
+            <div class="media-card-meta">
+                <span class="media-card-year">2016</span>
+                <div class="media-card-rating">
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span style="margin-left: 0.5rem; color: var(--text-dark-muted); font-size: 0.9rem;">4.7</span>
+                </div>
+            </div>
+            <div class="media-card-genres">
+                <span class="genre-tag">R&B</span>
+                <span class="genre-tag">Pop</span>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

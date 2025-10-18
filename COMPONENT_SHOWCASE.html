@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайн-система Медиатека - Демонстрация компонентов</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="header-logo">🎬🎵 Медиатека</a>
+            
+            <div class="header-search">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="input-glass" placeholder="Поиск фильмов, музыки, исполнителей...">
+                </div>
+            </div>
+            
+            <div class="header-user">
+                <a href="#" class="btn-glass">Мои списки</a>
+                <a href="#" class="user-avatar">U</a>
+            </div>
+        </div>
+    </header>
+
+    <main style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="text-center">
+                <h1 class="hero-title">Демонстрация дизайн-системы</h1>
+                <p class="hero-subtitle">Все компоненты в действии с темной темой и стекломорфизмом</p>
+            </div>
+        </section>
+
+        <!-- Button Showcase -->
+        <section style="margin: 3rem 0;">
+            <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2rem;">Кнопки</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                <button class="btn-primary-glass">🎬 Основная кнопка</button>
+                <button class="btn-secondary-glass">🎵 Вторичная кнопка</button>
+                <button class="btn-glass">⚙️ Стеклянная кнопка</button>
+            </div>
+        </section>
+
+        <!-- Input Showcase -->
+        <section style="margin: 3rem 0;">
+            <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2rem;">Поля ввода</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">Обычное поле</label>
+                    <input type="text" class="input-glass" placeholder="Введите текст...">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">Поиск</label>
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="input-glass" placeholder="Поиск...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards Showcase -->
+        <section style="margin: 3rem 0;">
+            <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2rem;">Карточки контента</h2>
+            <div class="media-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/280x300/1a1a1a/3b82f6?text=Фильм" alt="Фильм" class="media-card-poster">
+                    <div class="media-card-content">
+                        <h3 class="media-card-title">Интерстеллар</h3>
+                        <div class="media-card-meta">
+                            <span class="media-card-year">2014</span>
+                            <div class="media-card-rating">
+                                <div class="star-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span style="margin-left: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">8.6</span>
+                            </div>
+                        </div>
+                        <div class="media-card-genres">
+                            <span class="genre-tag">Фантастика</span>
+                            <span class="genre-tag">Драма</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <img src="https://via.placeholder.com/280x300/1a1a1a/10b981?text=Альбом" alt="Альбом" class="media-card-poster">
+                    <div class="media-card-content">
+                        <h3 class="media-card-title">Random Access Memories</h3>
+                        <div class="media-card-meta">
+                            <span class="media-card-year">2013</span>
+                            <div class="media-card-rating">
+                                <div class="star-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star empty">★</span>
+                                </div>
+                                <span style="margin-left: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">4.2</span>
+                            </div>
+                        </div>
+                        <div class="media-card-genres">
+                            <span class="genre-tag">Electronic</span>
+                            <span class="genre-tag">Disco</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carousel Showcase -->
+        <section class="carousel-container">
+            <h2 class="carousel-title">
+                <span>⭐</span> Карусель с горизонтальным скроллом
+            </h2>
+            <div class="carousel-scroll">
+                <div class="carousel-item">
+                    <div class="media-card">
+                        <img src="https://via.placeholder.com/280x300/1a1a1a/8b5cf6?text=Item+1" alt="Item 1" class="media-card-poster">
+                        <div class="media-card-content">
+                            <h3 class="media-card-title">Элемент 1</h3>
+                            <div class="media-card-meta">
+                                <span class="media-card-year">2024</span>
+                                <div class="media-card-rating">
+                                    <div class="star-rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <span style="margin-left: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="media-card">
+                        <img src="https://via.placeholder.com/280x300/1a1a1a/ec4899?text=Item+2" alt="Item 2" class="media-card-poster">
+                        <div class="media-card-content">
+                            <h3 class="media-card-title">Элемент 2</h3>
+                            <div class="media-card-meta">
+                                <span class="media-card-year">2024</span>
+                                <div class="media-card-rating">
+                                    <div class="star-rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span style="margin-left: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="media-card">
+                        <img src="https://via.placeholder.com/280x300/1a1a1a/3b82f6?text=Item+3" alt="Item 3" class="media-card-poster">
+                        <div class="media-card-content">
+                            <h3 class="media-card-title">Элемент 3</h3>
+                            <div class="media-card-meta">
+                                <span class="media-card-year">2024</span>
+                                <div class="media-card-rating">
+                                    <div class="star-rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <span style="margin-left: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Navigation Showcase -->
+        <nav class="filter-nav">
+            <div class="filter-buttons">
+                <button class="filter-btn active">Все</button>
+                <button class="filter-btn">🎬 Фильмы</button>
+                <button class="filter-btn">🎵 Музыка</button>
+                <button class="filter-btn">🆕 Новинки</button>
+                <button class="filter-btn">⭐ Топ рейтинга</button>
+            </div>
+        </nav>
+
+        <!-- Glass Cards Showcase -->
+        <section style="margin: 3rem 0;">
+            <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2rem;">Стеклянные карточки</h2>
+            <div class="media-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="glass-card" style="padding: 2rem; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎬</div>
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Фильмы</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Управляйте своей коллекцией фильмов</p>
+                    <button class="btn-primary-glass">Перейти</button>
+                </div>
+                
+                <div class="glass-card" style="padding: 2rem; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎵</div>
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Музыка</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Организуйте музыкальную библиотеку</p>
+                    <button class="btn-secondary-glass">Перейти</button>
+                </div>
+                
+                <div class="glass-card" style="padding: 2rem; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Настройки</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Персонализируйте свой опыт</p>
+                    <button class="btn-glass">Перейти</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Demo Button -->
+        <section style="margin: 3rem 0; text-align: center;">
+            <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2rem;">Модальное окно</h2>
+            <button class="btn-primary-glass" onclick="showDemoModal()">Открыть демо модальное окно</button>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; margin-top: 4rem; border-top: 1px solid var(--glass-border); color: var(--text-muted);">
+        <div>&copy; 2025 Медиатека - Демонстрация дизайн-системы</div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+    <script>
+        function showDemoModal() {
+            showMediaModal({
+                title: 'Демо фильм',
+                year: '2024',
+                rating: '4.5',
+                genres: ['Драма', 'Фантастика'],
+                type: 'movie'
+            });
+        }
+    </script>
+</body>
+</html>

@@ -6,9 +6,23 @@ from .forms import UserRegistrationForm, UserLoginForm, UserUpdateForm
 from .models import CustomUser
 
 def register(request):
+    if request.user.is_authenticated:
+        messages.info(request, 'You are already logged in.')
+        return redirect('home')
+
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST, request.FILES)
         if form.is_valid():
+            username = form.cleaned_data.get('username')
+            email = form.cleaned_data.get('email')
+
+            # Prevent duplicate registration by username/email
+            if CustomUser.objects.filter(username=username).exists() or (
+                email and CustomUser.objects.filter(email=email).exists()
+            ):
+                messages.warning(request, 'Account already exists. Please log in.')
+                return redirect('login')
+
             user = form.save()
             login(request, user)
             messages.success(request, 'Registration successful!')

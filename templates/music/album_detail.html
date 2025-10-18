@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}{{ album.title }} · Album{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ album.title }}</h1>
+  <div>
+    <a href="/music/albums/" class="btn btn-secondary">Альбомы</a>
+    <a href="/music/tracks/" class="btn btn-secondary">Треки</a>
+  </div>
+  <div class="card-badges">
+    <span class="year">{{ album.release_year }}</span>
+  </div>
+  {% with g_list=album.genres.all %}
+    {% if g_list %}
+      <div class="mt-2 text-muted">Жанры: {{ g_list|join:', ' }}</div>
+    {% endif %}
+  {% endwith %}
+  <div class="text-muted">Артист: {{ album.artist.name }}</div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <p class="description">{{ album.description|default:"Нет описания" }}</p>
+  </div>
+</div>
+
+<div class="mt-4">
+  <h3>Треки</h3>
+  <ul class="list-group">
+    {% for t in tracks %}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>{{ t.title }} ({{ t.duration }}s)</span>
+        {% if request.user.is_authenticated %}
+        <form method="post" action="/music/tracks/{{ t.id }}/favorite/">
+          {% csrf_token %}
+          <button class="btn btn-favorite btn-sm" type="submit">Избранное</button>
+        </form>
+        {% endif %}
+      </li>
+    {% empty %}
+      <li class="list-group-item">Нет треков</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+

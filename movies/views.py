@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import JsonResponse
 from django.db.models import Q, Avg
 from django.core.paginator import Paginator
+from django.contrib import messages
 from .models import Movie, Genre, Review
-from .forms import ReviewForm
+from .forms import ReviewForm, MovieForm
 
 def movie_list(request):
     movies = Movie.objects.all()
@@ -103,3 +104,44 @@ def toggle_favorite_movie(request, movie_id):
         return JsonResponse({'is_favorited': is_favorited})
     
     return redirect('movie_detail', movie_id=movie_id)
+
+
+@user_passes_test(lambda u: u.is_staff)
+def add_movie(request):
+    if request.method == 'POST':
+        form = MovieForm(request.POST)
+        if form.is_valid():
+            movie = form.save()
+            messages.success(request, f'Фильм "{movie.title}" успешно добавлен!')
+            return redirect('movie_detail', movie_id=movie.id)
+    else:
+        form = MovieForm()
+    
+    return render(request, 'movies/add_movie.html', {'form': form})
+
+
+@user_passes_test(lambda u: u.is_staff)
+def edit_movie(request, movie_id):
+    movie = get_object_or_404(Movie, id=movie_id)
+    if request.method == 'POST':
+        form = MovieForm(request.POST, instance=movie)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Фильм "{movie.title}" обновлен!')
+            return redirect('movie_detail', movie_id=movie.id)
+    else:
+        form = MovieForm(instance=movie)
+    
+    return render(request, 'movies/edit_movie.html', {'form': form, 'movie': movie})
+
+
+@user_passes_test(lambda u: u.is_staff)
+def delete_movie(request, movie_id):
+    movie = get_object_or_404(Movie, id=movie_id)
+    if request.method == 'POST':
+        title = movie.title
+        movie.delete()
+        messages.success(request, f'Фильм "{title}" удален!')
+        return redirect('movie_list')
+    
+    return render(request, 'movies/delete_movie.html', {'movie': movie})

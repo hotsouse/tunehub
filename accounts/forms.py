@@ -20,29 +20,3 @@ class UserUpdateForm(forms.ModelForm):
     class Meta:
         model = CustomUser
         fields = ['username', 'email', 'profile_picture', 'bio']
-
-# movies/forms.py
-from django import forms
-from .models import Review
-
-class ReviewForm(forms.ModelForm):
-    class Meta:
-        model = Review
-        fields = ['rating', 'comment']
-        widgets = {
-            'rating': forms.NumberInput(attrs={'min': 1, 'max': 10, 'class': 'form-control'}),
-            'comment': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
-        }
-
-# music/forms.py
-from django import forms
-from .models import Playlist
-
-class PlaylistForm(forms.ModelForm):
-    class Meta:
-        model = Playlist
-        fields = ['name', 'description', 'is_public']
-        widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
-        }

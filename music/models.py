@@ -42,6 +42,18 @@ class Track(models.Model):
     )
     duration = models.IntegerField(help_text="Duration in seconds")
     rating = models.FloatField(default=0)
+    artists = models.ManyToManyField(Artist, related_name="tracks", blank=True)
 
     def __str__(self):
         return f"{self.title} - {self.album.title if self.album else 'No Album'}"
+
+
+class Playlist(models.Model):
+    name = models.CharField(max_length=120)
+    description = models.TextField(blank=True, null=True)
+    is_public = models.BooleanField(default=False)
+    user = models.ForeignKey('accounts.CustomUser', on_delete=models.CASCADE, related_name='playlists')
+    tracks = models.ManyToManyField(Track, related_name='in_playlists', blank=True)
+
+    def __str__(self):
+        return f"{self.name} ({'public' if self.is_public else 'private'})"

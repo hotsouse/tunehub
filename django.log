@@ -1,0 +1,424 @@
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\__init__.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 640
+"GET /static/style.css HTTP/1.1" 404 1786
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3278
+"GET /music/tracks/ HTTP/1.1" 200 1397
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/albums/ HTTP/1.1" 200 815
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /accounts/login/ HTTP/1.1" 200 715
+"GET /accounts/register/ HTTP/1.1" 200 1608
+"GET /accounts/login/ HTTP/1.1" 200 715
+C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 640
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 640
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 640
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET //accounts/login/ HTTP/1.1" 200 2966
+"GET /static/style.css HTTP/1.1" 404 1786
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3278
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+Internal Server Error: /movies/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\movies\views.py", line 54, in movie_list
+    return render(request, 'movies/movie_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/movie_list.html
+"GET /movies/ HTTP/1.1" 500 88481
+Not Found: /music/
+"GET /music/ HTTP/1.1" 404 4333
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+"GET /static/admin/css/base.css HTTP/1.1" 200 21207
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+Internal Server Error: /movies/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\movies\views.py", line 54, in movie_list
+    return render(request, 'movies/movie_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/movie_list.html
+"GET /movies/ HTTP/1.1" 500 88481
+C:\Users\uldan\movie_music_catalog\api\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\api\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\api\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+Internal Server Error: /movies/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\movies\views.py", line 54, in movie_list
+    return render(request, 'movies/movie_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/movie_list.html
+"GET /movies/ HTTP/1.1" 500 88481
+Internal Server Error: /movies/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\movies\views.py", line 54, in movie_list
+    return render(request, 'movies/movie_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/movie_list.html
+"GET /movies/ HTTP/1.1" 500 88481
+C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /movies/ HTTP/1.1" 200 4377
+"GET /static/style.css HTTP/1.1" 404 1786
+Not Found: /music/
+"GET /music/ HTTP/1.1" 404 4333
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /movies/ HTTP/1.1" 200 4377
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/?q=laptop+wallpaper&genre=&year=&min_rating=1 HTTP/1.1" 200 4686
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/?q=laptop+wallpaper&genre=&year=&min_rating=1 HTTP/1.1" 200 4686
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/ HTTP/1.1" 200 4377
+"GET /static/style.css HTTP/1.1" 404 1786
+Not Found: /music/
+"GET /music/ HTTP/1.1" 404 4333
+Not Found: /music/
+"GET /music/ HTTP/1.1" 404 4333
+C:\Users\uldan\movie_music_catalog\music\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\music\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /music/ HTTP/1.1" 200 2767
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/?q=laptop+wallpaper&genre= HTTP/1.1" 200 2783
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/ HTTP/1.1" 200 4377
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/ HTTP/1.1" 200 2834
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/ HTTP/1.1" 200 2834
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/tracks/ HTTP/1.1" 200 3302
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/ HTTP/1.1" 200 2834
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/ HTTP/1.1" 200 4377
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/ HTTP/1.1" 200 2834
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+C:\Users\uldan\movie_music_catalog\movies\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\movies\forms.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/ HTTP/1.1" 200 4377
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET / HTTP/1.1" 200 3128
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/ HTTP/1.1" 200 4377
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/ HTTP/1.1" 200 2834
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/ HTTP/1.1" 200 2834
+"GET /static/style.css HTTP/1.1" 404 1786
+Watching for file changes with StatReloader
+"GET /music/ HTTP/1.1" 200 2715
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET / HTTP/1.1" 200 3009
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/ HTTP/1.1" 200 4258
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4341
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+"GET /accounts/login/ HTTP/1.1" 200 2847
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /static/style.css HTTP/1.1" 404 1786
+"POST /accounts/login/ HTTP/1.1" 200 3010
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /accounts/register/ HTTP/1.1" 200 4037
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /static/style.css HTTP/1.1" 404 1786
+"POST /accounts/register/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3164
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /accounts/profile/ HTTP/1.1" 200 13644
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /movies/ HTTP/1.1" 200 4241
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /movies/?q=laptop+wallpaper&genre=&year=&min_rating= HTTP/1.1" 200 4537
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET / HTTP/1.1" 200 2992
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /static/style.css HTTP/1.1" 404 1786
+"GET /music/ HTTP/1.1" 200 2698
+"GET /static/js/main.js HTTP/1.1" 404 1789
+"GET /static/style.css HTTP/1.1" 404 1786
+C:\Users\uldan\movie_music_catalog\catalog\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\uldan\movie_music_catalog\catalog\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2992
+"GET /static/js/main.js HTTP/1.1" 200 15597
+"GET /static/style.css HTTP/1.1" 200 28001
+"GET /accounts/profile/ HTTP/1.1" 200 13644
+"GET /movies/ HTTP/1.1" 200 4241
+"GET /movies/?sort=-rating HTTP/1.1" 200 4281
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3700
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 9358
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /admin/music/album/add/ HTTP/1.1" 200 14464
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/core.js HTTP/1.1" 200 5682
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+"GET /admin/music/artist/add/?_to_field=id&_popup=1 HTTP/1.1" 200 6219
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"POST /admin/music/artist/add/?_to_field=id&_popup=1 HTTP/1.1" 200 323
+"GET /static/admin/js/popup_response.js HTTP/1.1" 200 551
+"GET /admin/music/genre/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4392
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"POST /admin/music/genre/add/?_to_field=id&_popup=1 HTTP/1.1" 200 325
+"POST /admin/music/album/add/ HTTP/1.1" 302 0
+"GET /admin/music/album/ HTTP/1.1" 200 12394
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /admin/music/artist/add/ HTTP/1.1" 200 12272
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/movies/actor/add/ HTTP/1.1" 200 11045
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"POST /admin/movies/actor/add/ HTTP/1.1" 302 0
+"GET /admin/movies/actor/ HTTP/1.1" 200 11345
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET / HTTP/1.1" 200 2991
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /movies/ HTTP/1.1" 200 4335
+"GET /movies/?q=spider&genre=&year=&min_rating= HTTP/1.1" 200 4571
+"GET /admin/movies/movie/add/ HTTP/1.1" 200 16770
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/movies/genre/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4393
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"POST /admin/movies/genre/add/?_to_field=id&_popup=1 HTTP/1.1" 200 329
+"GET /admin/movies/actor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4992
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"POST /admin/movies/actor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 330
+"POST /admin/movies/movie/add/ HTTP/1.1" 302 0
+"GET /admin/movies/movie/ HTTP/1.1" 200 12387
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET / HTTP/1.1" 200 2991
+"GET /movies/ HTTP/1.1" 200 5553
+"POST /movies/1/favorite/ HTTP/1.1" 302 0
+"GET /movies/1/ HTTP/1.1" 200 3895
+"POST /movies/1/ HTTP/1.1" 302 0
+"GET /movies/1/ HTTP/1.1" 200 4060
+"GET /accounts/profile/ HTTP/1.1" 200 13642
+"GET /music/ HTTP/1.1" 200 3313
+"GET /music/albums/1/ HTTP/1.1" 200 2451
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /music/?q=&genre= HTTP/1.1" 200 3313
+"GET /music/tracks/ HTTP/1.1" 200 3263
+"GET /accounts/profile/ HTTP/1.1" 200 13642
+"GET /accounts/profile/ HTTP/1.1" 200 13642
+"GET /accounts/profile/ HTTP/1.1" 200 13642
+"GET /accounts/profile/ HTTP/1.1" 200 13642
+"GET /accounts/profile/ HTTP/1.1" 200 13642
+"GET / HTTP/1.1" 200 2991
+"GET /music/ HTTP/1.1" 200 3313
+"GET /music/tracks/ HTTP/1.1" 200 3263
+"GET /music/tracks/ HTTP/1.1" 200 3263
+"GET /music/tracks/ HTTP/1.1" 200 3263
+"GET /static/style.css HTTP/1.1" 200 29139
+"GET /static/js/main.js HTTP/1.1" 200 15601
+"GET /accounts/profile/ HTTP/1.1" 200 13642
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 2991
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 2991
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /music/ HTTP/1.1" 200 3313
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /music/ HTTP/1.1" 200 3318
+"GET /static/style.css HTTP/1.1" 200 29184
+"GET /static/js/main.js HTTP/1.1" 200 15599
+"GET /music/ HTTP/1.1" 200 3318
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /accounts/profile/ HTTP/1.1" 200 13667
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 2996
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /movies/ HTTP/1.1" 200 5660
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3278
+"GET / HTTP/1.1" 200 2996
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /movies/ HTTP/1.1" 200 5660
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 2996
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /music/ HTTP/1.1" 200 3318
+"GET /music/ HTTP/1.1" 200 3318
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/style.css HTTP/1.1" 200 30444
+"GET /accounts/profile/ HTTP/1.1" 200 13667
+"GET / HTTP/1.1" 200 3250
+"GET /movies/ HTTP/1.1" 200 5660
+"GET / HTTP/1.1" 200 3250
+"GET /music/ HTTP/1.1" 200 3318
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3250
+"GET /static/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3278
+"GET /movies/ HTTP/1.1" 200 5660
+"GET /admin/movies/movie/add/ HTTP/1.1" 200 16851
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0

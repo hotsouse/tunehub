@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить фильм · Catalog{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Добавить фильм</h1>
+  <a href="/movies/" class="btn btn-secondary">Все фильмы</a>
+</div>
+
+<div class="form-container">
+  <form method="post" class="form">
+    {% csrf_token %}
+    
+    <div class="form-group">
+      <label for="{{ form.title.id_for_label }}">Название фильма *</label>
+      {{ form.title }}
+      {% if form.title.errors %}
+        <div class="text-danger">{{ form.title.errors }}</div>
+      {% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.description.id_for_label }}">Описание</label>
+      {{ form.description }}
+      {% if form.description.errors %}
+        <div class="text-danger">{{ form.description.errors }}</div>
+      {% endif %}
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="{{ form.release_year.id_for_label }}">Год выпуска *</label>
+        {{ form.release_year }}
+        {% if form.release_year.errors %}
+          <div class="text-danger">{{ form.release_year.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.duration.id_for_label }}">Длительность (мин) *</label>
+        {{ form.duration }}
+        {% if form.duration.errors %}
+          <div class="text-danger">{{ form.duration.errors }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Жанры</label>
+      <div class="checkbox-group">
+        {{ form.genres }}
+      </div>
+      {% if form.genres.errors %}
+        <div class="text-danger">{{ form.genres.errors }}</div>
+      {% endif %}
+    </div>
+
+    <div class="form-group">
+      <label>Режиссёры</label>
+      <div class="checkbox-group">
+        {{ form.directors }}
+      </div>
+      {% if form.directors.errors %}
+        <div class="text-danger">{{ form.directors.errors }}</div>
+      {% endif %}
+    </div>
+
+    <div class="form-group">
+      <label>Актёры</label>
+      <div class="checkbox-group">
+        {{ form.actors }}
+      </div>
+      {% if form.actors.errors %}
+        <div class="text-danger">{{ form.actors.errors }}</div>
+      {% endif %}
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary btn-large">Добавить фильм</button>
+      <a href="/movies/" class="btn btn-secondary">Отмена</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

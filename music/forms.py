@@ -1,48 +1,38 @@
-# accounts/forms.py
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .models import CustomUser
+from .models import Album, Track, Artist, Genre, Playlist
 
-class UserRegistrationForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-    profile_picture = forms.ImageField(required=False)
-    bio = forms.CharField(widget=forms.Textarea, required=False)
-    
+
+class AlbumForm(forms.ModelForm):
     class Meta:
-        model = CustomUser
-        fields = ['username', 'email', 'password1', 'password2', 'profile_picture', 'bio']
-
-class UserLoginForm(AuthenticationForm):
-    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-
-class UserUpdateForm(forms.ModelForm):
-    class Meta:
-        model = CustomUser
-        fields = ['username', 'email', 'profile_picture', 'bio']
-
-# movies/forms.py
-from django import forms
-from .models import Review
-
-class ReviewForm(forms.ModelForm):
-    class Meta:
-        model = Review
-        fields = ['rating', 'comment']
+        model = Album
+        fields = ['title', 'artist', 'release_year', 'description', 'genres']
         widgets = {
-            'rating': forms.NumberInput(attrs={'min': 1, 'max': 10, 'class': 'form-control'}),
-            'comment': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Название альбома'}),
+            'artist': forms.Select(attrs={'class': 'form-control'}),
+            'release_year': forms.NumberInput(attrs={'class': 'form-control', 'min': '1900', 'max': '2030'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Описание альбома'}),
+            'genres': forms.CheckboxSelectMultiple(),
         }
 
-# music/forms.py
-from django import forms
-from .models import Playlist
+
+class TrackForm(forms.ModelForm):
+    class Meta:
+        model = Track
+        fields = ['title', 'album', 'duration', 'artists']
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Название трека'}),
+            'album': forms.Select(attrs={'class': 'form-control'}),
+            'duration': forms.NumberInput(attrs={'class': 'form-control', 'min': '1', 'placeholder': 'Длительность в секундах'}),
+            'artists': forms.CheckboxSelectMultiple(),
+        }
+
 
 class PlaylistForm(forms.ModelForm):
     class Meta:
         model = Playlist
         fields = ['name', 'description', 'is_public']
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Название плейлиста'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 2, 'placeholder': 'Описание плейлиста'}),
+            'is_public': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
         }

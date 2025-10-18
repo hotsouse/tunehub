@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Login · Catalog{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h1 class="h4 mb-3">Login</h1>
+        <form method="post" class="vstack gap-3">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+          {% for field in form %}
+            <div>
+              <label class="form-label">{{ field.label }}</label>
+              {{ field }}
+              {% for error in field.errors %}<div class="text-danger small">{{ error }}</div>{% endfor %}
+            </div>
+          {% endfor %}
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div class="text-muted small">No account? <a href="/accounts/register/">Register</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

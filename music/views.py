@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.db.models import Q
 from django.core.paginator import Paginator
-from .models import Track, Album, Artist, MusicGenre, Playlist
+from .models import Track, Album, Artist, Genre, Playlist
 from .forms import PlaylistForm
 
 def track_list(request):
@@ -21,7 +21,7 @@ def track_list(request):
     # Filtering
     genre_filter = request.GET.get('genre')
     if genre_filter:
-        tracks = tracks.filter(album__genre__name=genre_filter)
+        tracks = tracks.filter(album__genres__name=genre_filter)
     
     artist_filter = request.GET.get('artist')
     if artist_filter:
@@ -37,7 +37,7 @@ def track_list(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     
-    genres = MusicGenre.objects.all()
+    genres = Genre.objects.all()
     artists = Artist.objects.all()
     
     context = {
@@ -49,7 +49,7 @@ def track_list(request):
     return render(request, 'music/track_list.html', context)
 
 def album_list(request):
-    albums = Album.objects.all().select_related('artist', 'genre')
+    albums = Album.objects.all().select_related('artist').prefetch_related('genres')
     
     query = request.GET.get('q')
     if query:
@@ -60,13 +60,13 @@ def album_list(request):
     
     genre_filter = request.GET.get('genre')
     if genre_filter:
-        albums = albums.filter(genre__name=genre_filter)
+        albums = albums.filter(genres__name=genre_filter)
     
     paginator = Paginator(albums, 12)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     
-    genres = MusicGenre.objects.all()
+    genres = Genre.objects.all()
     
     context = {
         'page_obj': page_obj,

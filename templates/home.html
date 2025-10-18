@@ -1,11 +1,36 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>Movie & Music Catalog</title>
-</head>
-<body>
-    <h1>Welcome to Movie & Music Catalog! 🎬🎵</h1>
-    <p>Project is working! ✅</p>
-    <p><a href="/admin/">Go to Admin Panel</a></p>
-</body>
-</html>
+﻿{% extends "base.html" %}
+
+{% block title %}Home · Movie & Music Catalog{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="text-center">
+        <h1 class="hero-title">Добро пожаловать в Медиатеку</h1>
+        <p class="hero-subtitle">Ищите, просматривайте и собирайте избранное в едином месте</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="/movies/" class="btn-primary-glass">🎬 Смотреть фильмы</a>
+            <a href="/music/" class="btn-secondary-glass">🎵 Слушать музыку</a>
+            {% if request.user.is_authenticated %}
+                <a href="/admin/" class="btn-glass">⚙️ Админ панель</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<div class="features">
+    <div class="feature-card">
+        <h3>🎬 Умный каталог фильмов</h3>
+        <p>Фильтры, сортировка, рейтинги и быстрое редактирование.</p>
+    </div>
+    <div class="feature-card">
+        <h3>🎵 Библиотека музыки</h3>
+        <p>Треки, альбомы, жанры и артисты в удобном интерфейсе.</p>
+    </div>
+    <div class="feature-card">
+        <h3>⭐ Избранное</h3>
+        <p>Добавляйте любимое в один клик и возвращайтесь позже.</p>
+    </div>
+</div>
+{% endblock %}
