@@ -8,16 +8,36 @@
   <a href="/movies/" class="btn btn-secondary">Все фильмы</a>
 </div>
 
-<div class="form-container">
+<div class="form-card">
   <form method="post" class="form">
     {% csrf_token %}
-    
-    <div class="form-group">
-      <label for="{{ form.title.id_for_label }}">Название фильма *</label>
-      {{ form.title }}
-      {% if form.title.errors %}
-        <div class="text-danger">{{ form.title.errors }}</div>
-      {% endif %}
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="{{ form.title.id_for_label }}">Название фильма *</label>
+        {{ form.title }}
+        {% if form.title.errors %}
+          <div class="text-danger">{{ form.title.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.release_year.id_for_label }}">Год выпуска *</label>
+        {{ form.release_year }}
+        {% if form.release_year.errors %}
+          <div class="text-danger">{{ form.release_year.errors }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="{{ form.duration.id_for_label }}">Длительность (мин) *</label>
+        {{ form.duration }}
+        {% if form.duration.errors %}
+          <div class="text-danger">{{ form.duration.errors }}</div>
+        {% endif %}
+      </div>
     </div>
 
     <div class="form-group">
@@ -26,24 +46,6 @@
       {% if form.description.errors %}
         <div class="text-danger">{{ form.description.errors }}</div>
       {% endif %}
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="{{ form.release_year.id_for_label }}">Год выпуска *</label>
-        {{ form.release_year }}
-        {% if form.release_year.errors %}
-          <div class="text-danger">{{ form.release_year.errors }}</div>
-        {% endif %}
-      </div>
-
-      <div class="form-group">
-        <label for="{{ form.duration.id_for_label }}">Длительность (мин) *</label>
-        {{ form.duration }}
-        {% if form.duration.errors %}
-          <div class="text-danger">{{ form.duration.errors }}</div>
-        {% endif %}
-      </div>
     </div>
 
     <div class="form-group">

@@ -1,28 +1,35 @@
 {% extends 'base.html' %}
-{% block title %}Register · Catalog{% endblock %}
+{% block title %}Регистрация · Медиатека{% endblock %}
 {% block content %}
-<div class="row justify-content-center">
-  <div class="col-md-6">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h1 class="h4 mb-3">Create account</h1>
-        <form method="post" enctype="multipart/form-data" class="vstack gap-3">
-          {% csrf_token %}
-          {{ form.non_field_errors }}
-          {% for field in form %}
-            <div>
-              <label class="form-label">{{ field.label }}</label>
-              {{ field }}
-              {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
-              {% for error in field.errors %}<div class="text-danger small">{{ error }}</div>{% endfor %}
-            </div>
-          {% endfor %}
-          <button type="submit" class="btn btn-primary">Create account</button>
-          <div class="text-muted small">Already registered? <a href="/accounts/login/">Login</a></div>
-        </form>
-      </div>
-    </div>
-  </div>
-  </div>
-{% endblock %}
+<div class="form-page">
+  <div class="form-card">
+    <h1 class="form-card-title">Создать аккаунт</h1>
+    <p class="form-card-subtitle">Собирайте свою коллекцию фильмов и музыки, отмечайте избранное и получайте рекомендации</p>
 
+    <form method="post" enctype="multipart/form-data" class="form">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+
+      {% for field in form %}
+        <div class="form-group">
+          <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+          {% if field.help_text %}
+            <div class="form-text">{{ field.help_text }}</div>
+          {% endif %}
+          {% for error in field.errors %}
+            <div class="text-danger small">{{ error }}</div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-large">Создать аккаунт</button>
+        <span class="text-muted small">Уже есть аккаунт?
+          <a href="/accounts/login/">Войти</a>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

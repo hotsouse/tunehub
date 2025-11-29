@@ -1,4 +1,3 @@
-# Открываем файл и добавляем содержимое
 Django==4.2.7
 djangorestframework==3.14.0
 django-cors-headers==4.3.1
@@ -8,3 +7,11 @@ gunicorn==21.2.0
 whitenoise==6.6.0
 drf-spectacular==0.27.2
 django-prometheus==2.3.1
+# Testing and code quality
+coverage==7.3.4
+bandit==1.7.6
+pytest==7.4.3
+pytest-django==4.7.0
+pytest-cov==4.1.0
+# Structured logging (optional, requires pythonjsonlogger)
+pythonjsonlogger==2.0.7
