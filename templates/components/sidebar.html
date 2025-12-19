@@ -1,0 +1,65 @@
+<aside class="sidebar">
+    <div class="sidebar-logo">
+        <div class="sidebar-logo-mark">VV</div>
+        <div class="sidebar-logo-text">
+            <span class="sidebar-logo-title">Vibe&nbsp;Vault</span>
+            <span class="sidebar-logo-subtitle">media hub</span>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <div class="sidebar-section-label">Обзор</div>
+        <a href="/" class="sidebar-link {% if request.path == '/' %}is-active{% endif %}">
+            <span class="sidebar-link-icon">🏠</span>
+            <span class="sidebar-link-text">Главная</span>
+        </a>
+
+        <div class="sidebar-section-label">Медиатека</div>
+        <a href="/movies/" class="sidebar-link {% if request.path|slice:':8' == '/movies/' or request.path == '/movies/' %}is-active{% endif %}">
+            <span class="sidebar-link-icon">🎬</span>
+            <span class="sidebar-link-text">Фильмы</span>
+        </a>
+        <a href="/music/" class="sidebar-link {% if request.path|slice:':7' == '/music/' or request.path == '/music/' %}is-active{% endif %}">
+            <span class="sidebar-link-icon">🎵</span>
+            <span class="sidebar-link-text">Музыка</span>
+        </a>
+        <a href="/favorites/" class="sidebar-link {% if request.path|slice:':11' == '/favorites/' or request.path == '/favorites/' %}is-active{% endif %}">
+            <span class="sidebar-link-icon">⭐</span>
+            <span class="sidebar-link-text">Избранное</span>
+        </a>
+
+        <div class="sidebar-section-label">Профиль</div>
+        {% if request.user.is_authenticated %}
+            <a href="/accounts/profile/" class="sidebar-link {% if '/accounts/profile' in request.path %}is-active{% endif %}">
+                <span class="sidebar-link-icon">👤</span>
+                <span class="sidebar-link-text">Профиль</span>
+            </a>
+            <a href="/admin/" class="sidebar-link">
+                <span class="sidebar-link-icon">⚙️</span>
+                <span class="sidebar-link-text">Админка</span>
+            </a>
+        {% else %}
+            <a href="/accounts/login/" class="sidebar-link {% if '/accounts/login' in request.path %}is-active{% endif %}">
+                <span class="sidebar-link-icon">🔐</span>
+                <span class="sidebar-link-text">Войти</span>
+            </a>
+            <a href="/accounts/register/" class="sidebar-link {% if '/accounts/register' in request.path %}is-active{% endif %}">
+                <span class="sidebar-link-icon">✨</span>
+                <span class="sidebar-link-text">Регистрация</span>
+            </a>
+        {% endif %}
+    </nav>
+
+    <div class="sidebar-now-playing">
+        <div class="sidebar-now-playing-label">Сейчас играет</div>
+        <div class="sidebar-now-playing-card">
+            <div class="sidebar-now-playing-cover"></div>
+            <div class="sidebar-now-playing-info">
+                <div class="sidebar-now-playing-title">Discover Weekly</div>
+                <div class="sidebar-now-playing-artist">Персональный микс</div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+

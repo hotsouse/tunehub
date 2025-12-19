@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ playlist.name }} - TuneHub{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="section-header">
+        <div>
+            <h1 class="section-title">{{ playlist.name }}</h1>
+            <p class="section-subtitle">
+                {% if playlist.description %}{{ playlist.description }}{% else %}Ваш музыкальный плейлист{% endif %}
+            </p>
+        </div>
+        <a href="{% url 'music:playlist_list' %}" class="btn btn-secondary">
+            <i data-lucide="arrow-left"></i>
+            Назад к плейлистам
+        </a>
+    </div>
+
+    <div style="display: grid; gap: 2rem;">
+        <!-- Playlist Info -->
+        <div style="
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+        ">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">
+                        {% if playlist.is_public %}
+                        <span style="
+                            padding: 0.25rem 0.75rem;
+                            background: rgba(16, 185, 129, 0.1);
+                            color: #10B981;
+                            border-radius: 12px;
+                            font-size: 0.875rem;
+                            font-weight: 600;
+                        ">Публичный плейлист</span>
+                        {% else %}
+                        <span style="
+                            padding: 0.25rem 0.75rem;
+                            background: rgba(107, 114, 128, 0.1);
+                            color: #6B7280;
+                            border-radius: 12px;
+                            font-size: 0.875rem;
+                            font-weight: 600;
+                        ">Приватный плейлист</span>
+                        {% endif %}
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        Треков: {{ playlist.tracks.count }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tracks in Playlist -->
+        <div style="
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+        ">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.25rem;">
+                <i data-lucide="music" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle;"></i>
+                Треки в плейлисте
+            </h2>
+            
+            {% if playlist.tracks.all %}
+            <div style="display: grid; gap: 1rem;">
+                {% for track in playlist.tracks.all %}
+                <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem;
+                    background: var(--bg-primary);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                ">
+                    <div style="flex: 1;">
+                        <strong style="font-size: 1rem; color: var(--text-primary);">{{ track.title }}</strong>
+                        <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                            {% if track.artists.all %}
+                            <span>
+                                {% for artist in track.artists.all %}
+                                    {{ artist.name }}{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </span>
+                            {% endif %}
+                            {% if track.album %}
+                            <span style="margin: 0 0.5rem;">•</span>
+                            <span>{{ track.album.title }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <form method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="track_id" value="{{ track.id }}">
+                        <button type="submit" class="btn btn-danger" style="padding: 0.5rem 1rem;">
+                            <i data-lucide="trash-2"></i>
+                            Удалить
+                        </button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p style="text-align: center; color: var(--text-secondary); padding: 2rem;">
+                В этом плейлисте пока нет треков. Добавьте треки из каталога!
+            </p>
+            {% endif %}
+        </div>
+
+        <!-- Add Tracks -->
+        <div style="
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+        ">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.25rem;">
+                <i data-lucide="plus-circle" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle;"></i>
+                Добавить треки в плейлист
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                Перейдите в <a href="{% url 'music:track_list' %}" style="color: var(--primary);">каталог треков</a> и добавьте их в этот плейлист.
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    lucide.createIcons();
+</script>
+{% endblock %}
+

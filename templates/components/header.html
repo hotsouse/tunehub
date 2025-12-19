@@ -1,0 +1,32 @@
+<header class="header">
+    <div class="header-content">
+        <div class="header-page-title">
+            {% block page_title %}{% endblock %}
+        </div>
+
+        <div class="header-search">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="input-glass" placeholder="Поиск по фильмам, трекам и артистам">
+            </div>
+        </div>
+
+        <div class="header-user">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_staff %}
+                <a href="{% url 'admin_panel' %}" class="btn-glass">
+                    <i data-lucide="settings"></i>
+                    Админ-панель
+                </a>
+                {% endif %}
+                <a href="/accounts/profile/" class="btn-glass">Моя медиатека</a>
+                <a href="/accounts/logout/" class="user-avatar">{{ request.user.username|first|upper }}</a>
+            {% else %}
+                <a href="/accounts/login/" class="btn-glass">Войти</a>
+                <a href="/accounts/register/" class="btn-primary-glass">Регистрация</a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+

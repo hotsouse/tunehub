@@ -1,35 +1,393 @@
 {% extends 'base.html' %}
-{% block title %}Регистрация · Медиатека{% endblock %}
+{% load static %}
+
+{% block title %}Регистрация - TuneHub{% endblock %}
+
 {% block content %}
-<div class="form-page">
-  <div class="form-card">
-    <h1 class="form-card-title">Создать аккаунт</h1>
-    <p class="form-card-subtitle">Собирайте свою коллекцию фильмов и музыки, отмечайте избранное и получайте рекомендации</p>
-
-    <form method="post" enctype="multipart/form-data" class="form">
-      {% csrf_token %}
-      {{ form.non_field_errors }}
-
-      {% for field in form %}
-        <div class="form-group">
-          <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
-          {{ field }}
-          {% if field.help_text %}
-            <div class="form-text">{{ field.help_text }}</div>
-          {% endif %}
-          {% for error in field.errors %}
-            <div class="text-danger small">{{ error }}</div>
-          {% endfor %}
+<section style="
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--gradient-dark);
+    position: relative;
+    overflow: hidden;
+">
+    <!-- Decorative Background -->
+    <div style="
+        position: absolute;
+        top: -50%;
+        left: -20%;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: float 20s infinite ease-in-out;
+    "></div>
+    
+    <div style="
+        position: absolute;
+        bottom: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: float 25s infinite ease-in-out reverse;
+    "></div>
+    
+    <!-- Register Card -->
+    <div style="
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 500px;
+        background: rgba(30, 41, 59, 0.8);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 3rem;
+        box-shadow: var(--shadow-lg);
+    ">
+        <!-- Logo -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <a href="{% url 'home' %}" class="logo" style="
+                display: inline-flex;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            ">
+                <i data-lucide="music"></i>
+                <span>TuneHub</span>
+            </a>
+            <h1 style="
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 0.5rem;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            ">
+                Создайте аккаунт
+            </h1>
+            <p style="color: var(--text-secondary);">
+                Присоединяйтесь к TuneHub и начните слушать музыку
+            </p>
         </div>
-      {% endfor %}
+        
+        <!-- Error Messages -->
+        {% if form.errors %}
+        <div style="
+            padding: 1rem 1.5rem;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        ">
+            <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <i data-lucide="alert-circle" style="color: #EF4444; flex-shrink: 0; margin-top: 0.25rem;"></i>
+                <strong style="color: #EF4444;">Пожалуйста, исправьте следующие ошибки:</strong>
+            </div>
+            <ul style="margin: 0; padding-left: 2rem; color: #EF4444;">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        <!-- Register Form -->
+        <form method="post" action="{% url 'accounts:register' %}" id="registerForm">
+            {% csrf_token %}
+            
+            <!-- Username -->
+            <div class="form-group">
+                <label for="id_username" class="form-label">
+                    <i data-lucide="user" style="width: 16px; height: 16px;"></i>
+                    Имя пользователя
+                </label>
+                <input 
+                    type="text" 
+                    name="username" 
+                    id="id_username"
+                    class="form-input" 
+                    placeholder="Выберите уникальное имя"
+                    required
+                    autofocus
+                    value="{{ form.username.value|default:'' }}"
+                    minlength="3"
+                    maxlength="150"
+                >
+                <small style="color: var(--text-muted); font-size: 0.875rem;">
+                    Минимум 3 символа. Только буквы, цифры и @/./+/-/_
+                </small>
+            </div>
+            
+            <!-- Email -->
+            <div class="form-group">
+                <label for="id_email" class="form-label">
+                    <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                    Email
+                </label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="id_email"
+                    class="form-input" 
+                    placeholder="your@email.com"
+                    required
+                    value="{{ form.email.value|default:'' }}"
+                >
+            </div>
+            
+            <!-- Password -->
+            <div class="form-group">
+                <label for="id_password1" class="form-label">
+                    <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
+                    Пароль
+                </label>
+                <div style="position: relative;">
+                    <input 
+                        type="password" 
+                        name="password1" 
+                        id="id_password1"
+                        class="form-input" 
+                        placeholder="Создайте надежный пароль"
+                        required
+                        minlength="8"
+                    >
+                    <button 
+                        type="button" 
+                        onclick="togglePassword('id_password1', 'passwordToggleIcon1')"
+                        style="
+                            position: absolute;
+                            right: 12px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            background: none;
+                            border: none;
+                            color: var(--text-muted);
+                            cursor: pointer;
+                            padding: 0.5rem;
+                        "
+                    >
+                        <i data-lucide="eye" id="passwordToggleIcon1"></i>
+                    </button>
+                </div>
+                
+                <!-- Password Strength Indicator -->
+                <div style="margin-top: 0.75rem;">
+                    <div style="
+                        height: 4px;
+                        background: var(--bg-tertiary);
+                        border-radius: 2px;
+                        overflow: hidden;
+                        margin-bottom: 0.5rem;
+                    ">
+                        <div id="passwordStrength" style="
+                            height: 100%;
+                            width: 0%;
+                            background: var(--primary);
+                            transition: all 0.3s;
+                        "></div>
+                    </div>
+                    <small id="passwordStrengthText" style="color: var(--text-muted); font-size: 0.875rem;">
+                        Минимум 8 символов, включая заглавные буквы, строчные буквы и цифры
+                    </small>
+                </div>
+            </div>
+            
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="id_password2" class="form-label">
+                    <i data-lucide="lock-keyhole" style="width: 16px; height: 16px;"></i>
+                    Подтвердите пароль
+                </label>
+                <div style="position: relative;">
+                    <input 
+                        type="password" 
+                        name="password2" 
+                        id="id_password2"
+                        class="form-input" 
+                        placeholder="Повторите пароль"
+                        required
+                    >
+                    <button 
+                        type="button" 
+                        onclick="togglePassword('id_password2', 'passwordToggleIcon2')"
+                        style="
+                            position: absolute;
+                            right: 12px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            background: none;
+                            border: none;
+                            color: var(--text-muted);
+                            cursor: pointer;
+                            padding: 0.5rem;
+                        "
+                    >
+                        <i data-lucide="eye" id="passwordToggleIcon2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Terms Agreement -->
+            <div style="margin-bottom: 1.5rem;">
+                <label style="
+                    display: flex;
+                    align-items: start;
+                    gap: 0.75rem;
+                    cursor: pointer;
+                    color: var(--text-secondary);
+                ">
+                    <input 
+                        type="checkbox" 
+                        name="agree_terms"
+                        required
+                        style="
+                            width: 18px;
+                            height: 18px;
+                            margin-top: 0.25rem;
+                            cursor: pointer;
+                            accent-color: var(--primary);
+                            flex-shrink: 0;
+                        "
+                    >
+                    <span style="font-size: 0.875rem;">
+                        Я согласен с 
+                        <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                            Условиями использования
+                        </a> 
+                        и 
+                        <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                            Политикой конфиденциальности
+                        </a>
+                    </span>
+                </label>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <i data-lucide="user-plus"></i>
+                Создать аккаунт
+            </button>
+        </form>
+        
+        <!-- Sign In Link -->
+        <div style="
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        ">
+            <p style="color: var(--text-secondary);">
+                Уже есть аккаунт? 
+                <a href="{% url 'accounts:login' %}" style="
+                    color: var(--primary);
+                    text-decoration: none;
+                    font-weight: 700;
+                    transition: var(--transition);
+                ">
+                    Войти
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
 
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary btn-large">Создать аккаунт</button>
-        <span class="text-muted small">Уже есть аккаунт?
-          <a href="/accounts/login/">Войти</a>
-        </span>
-      </div>
-    </form>
-  </div>
-</div>
+<script>
+    // Initialize icons
+    lucide.createIcons();
+    
+    // Toggle password visibility
+    function togglePassword(inputId, iconId) {
+        const passwordInput = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.setAttribute('data-lucide', 'eye-off');
+        } else {
+            passwordInput.type = 'password';
+            icon.setAttribute('data-lucide', 'eye');
+        }
+        
+        lucide.createIcons();
+    }
+    
+    // Password strength checker
+    const password1 = document.getElementById('id_password1');
+    const strengthBar = document.getElementById('passwordStrength');
+    const strengthText = document.getElementById('passwordStrengthText');
+    
+    password1.addEventListener('input', function() {
+        const value = this.value;
+        let strength = 0;
+        
+        if (value.length >= 8) strength += 25;
+        if (/[a-z]/.test(value)) strength += 25;
+        if (/[A-Z]/.test(value)) strength += 25;
+        if (/[0-9]/.test(value)) strength += 25;
+        
+        strengthBar.style.width = strength + '%';
+        
+        if (strength === 0) {
+            strengthBar.style.background = 'var(--bg-tertiary)';
+            strengthText.textContent = 'Минимум 8 символов, включая заглавные буквы, строчные буквы и цифры';
+            strengthText.style.color = 'var(--text-muted)';
+        } else if (strength <= 25) {
+            strengthBar.style.background = '#EF4444';
+            strengthText.textContent = 'Слабый пароль';
+            strengthText.style.color = '#EF4444';
+        } else if (strength <= 50) {
+            strengthBar.style.background = '#F59E0B';
+            strengthText.textContent = 'Средний пароль';
+            strengthText.style.color = '#F59E0B';
+        } else if (strength <= 75) {
+            strengthBar.style.background = '#3B82F6';
+            strengthText.textContent = 'Хороший пароль';
+            strengthText.style.color = '#3B82F6';
+        } else {
+            strengthBar.style.background = '#10B981';
+            strengthText.textContent = 'Отличный пароль!';
+            strengthText.style.color = '#10B981';
+        }
+    });
+    
+    // Form validation
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+        const password1 = document.getElementById('id_password1').value;
+        const password2 = document.getElementById('id_password2').value;
+        
+        if (password1 !== password2) {
+            e.preventDefault();
+            alert('Пароли не совпадают!');
+            return false;
+        }
+        
+        if (password1.length < 8) {
+            e.preventDefault();
+            alert('Пароль должен содержать минимум 8 символов!');
+            return false;
+        }
+        
+        if (!/[a-z]/.test(password1) || !/[A-Z]/.test(password1) || !/[0-9]/.test(password1)) {
+            e.preventDefault();
+            alert('Пароль должен содержать заглавные буквы, строчные буквы и цифры!');
+            return false;
+        }
+    });
+</script>
+
+<style>
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        33% { transform: translate(30px, -30px) rotate(120deg); }
+        66% { transform: translate(-30px, 30px) rotate(240deg); }
+    }
+</style>
 {% endblock %}

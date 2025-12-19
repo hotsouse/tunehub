@@ -633,3 +633,1409 @@ INFO 2025-11-29 09:56:49,847 basehttp 16644 14572 "GET /accounts/login/ HTTP/1.1
 INFO 2025-11-29 09:56:49,847 basehttp 16644 14572 "GET /accounts/login/ HTTP/1.1" 200 2852
 INFO 2025-11-29 09:56:56,470 basehttp 16644 12324 "GET /movies/ HTTP/1.1" 200 4921
 INFO 2025-11-29 09:56:56,470 basehttp 16644 12324 "GET /movies/ HTTP/1.1" 200 4921
+INFO 2025-11-29 10:20:22,423 basehttp 16644 7772 "GET / HTTP/1.1" 200 2979
+INFO 2025-11-29 10:20:22,423 basehttp 16644 7772 "GET / HTTP/1.1" 200 2979
+INFO 2025-11-29 10:40:02,844 basehttp 16644 16084 "GET / HTTP/1.1" 200 2979
+INFO 2025-11-29 10:40:02,844 basehttp 16644 16084 "GET / HTTP/1.1" 200 2979
+INFO 2025-11-29 10:42:44,276 basehttp 16644 18276 "GET / HTTP/1.1" 200 12080
+INFO 2025-11-29 10:42:44,276 basehttp 16644 18276 "GET / HTTP/1.1" 200 12080
+INFO 2025-11-29 10:42:54,489 basehttp 16644 18276 "GET /movies/ HTTP/1.1" 200 7700
+INFO 2025-11-29 10:42:54,489 basehttp 16644 18276 "GET /movies/ HTTP/1.1" 200 7700
+INFO 2025-11-29 10:43:15,563 basehttp 16644 18276 "GET / HTTP/1.1" 200 12080
+INFO 2025-11-29 10:43:15,563 basehttp 16644 18276 "GET / HTTP/1.1" 200 12080
+INFO 2025-11-29 10:43:48,221 basehttp 16644 18276 "GET /movies/ HTTP/1.1" 200 7700
+INFO 2025-11-29 10:43:48,221 basehttp 16644 18276 "GET /movies/ HTTP/1.1" 200 7700
+INFO 2025-11-29 10:44:02,914 basehttp 16644 18276 "GET /music/ HTTP/1.1" 200 6015
+INFO 2025-11-29 10:44:02,914 basehttp 16644 18276 "GET /music/ HTTP/1.1" 200 6015
+INFO 2025-11-29 10:49:40,339 basehttp 16644 19244 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:40,339 basehttp 16644 19244 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,215 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,215 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,432 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,432 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,652 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,652 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,832 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:42,832 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,155 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,155 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,336 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,336 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,554 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,554 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,932 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:43,932 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:44,131 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-11-29 10:49:44,131 basehttp 16644 17892 "GET /music/ HTTP/1.1" 200 5413
+INFO 2025-12-05 17:48:21,111 autoreload 17824 23468 Watching for file changes with StatReloader
+INFO 2025-12-05 17:48:21,111 autoreload 17824 23468 Watching for file changes with StatReloader
+INFO 2025-12-06 08:34:48,533 autoreload 26956 29228 Watching for file changes with StatReloader
+INFO 2025-12-06 08:34:48,533 autoreload 26956 29228 Watching for file changes with StatReloader
+INFO 2025-12-06 08:35:01,583 basehttp 26956 28032 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 08:35:01,583 basehttp 26956 28032 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 08:35:02,155 basehttp 26956 28032 "GET /static/style.css HTTP/1.1" 200 23025
+INFO 2025-12-06 08:35:02,155 basehttp 26956 28032 "GET /static/style.css HTTP/1.1" 200 23025
+INFO 2025-12-06 08:35:02,230 basehttp 26956 22304 "GET /static/js/main.js HTTP/1.1" 200 15599
+INFO 2025-12-06 08:35:02,230 basehttp 26956 22304 "GET /static/js/main.js HTTP/1.1" 200 15599
+WARNING 2025-12-06 08:35:03,602 log 26956 22304 Not Found: /favicon.ico
+WARNING 2025-12-06 08:35:03,602 log 26956 22304 Not Found: /favicon.ico
+WARNING 2025-12-06 08:35:03,610 basehttp 26956 22304 "GET /favicon.ico HTTP/1.1" 404 3278
+WARNING 2025-12-06 08:35:03,610 basehttp 26956 22304 "GET /favicon.ico HTTP/1.1" 404 3278
+INFO 2025-12-06 08:35:09,713 basehttp 26956 23500 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 08:35:09,713 basehttp 26956 23500 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:02:33,970 basehttp 26956 27120 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:02:33,970 basehttp 26956 27120 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:02:34,072 basehttp 26956 27120 "GET /static/style.css HTTP/1.1" 304 0
+INFO 2025-12-06 09:02:34,072 basehttp 26956 27120 "GET /static/style.css HTTP/1.1" 304 0
+INFO 2025-12-06 09:02:37,653 basehttp 26956 29860 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:02:37,653 basehttp 26956 29860 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:04:43,967 basehttp 26956 19660 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:04:43,967 basehttp 26956 19660 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:04:46,036 basehttp 26956 19660 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 09:04:46,036 basehttp 26956 19660 "GET / HTTP/1.1" 200 11175
+INFO 2025-12-06 10:51:37,210 autoreload 9348 9500 Watching for file changes with StatReloader
+INFO 2025-12-06 10:51:37,210 autoreload 9348 9500 Watching for file changes with StatReloader
+INFO 2025-12-20 01:16:39,765 autoreload 21608 19668 Watching for file changes with StatReloader
+INFO 2025-12-20 01:16:39,765 autoreload 21608 19668 Watching for file changes with StatReloader
+ERROR 2025-12-20 01:16:51,328 log 21608 20320 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'music'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'music' is not a registered namespace
+ERROR 2025-12-20 01:16:51,328 log 21608 20320 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'music'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'music' is not a registered namespace
+ERROR 2025-12-20 01:16:51,338 basehttp 21608 20320 "GET / HTTP/1.1" 500 142242
+ERROR 2025-12-20 01:16:51,338 basehttp 21608 20320 "GET / HTTP/1.1" 500 142242
+WARNING 2025-12-20 01:16:51,650 log 21608 20320 Not Found: /favicon.ico
+WARNING 2025-12-20 01:16:51,650 log 21608 20320 Not Found: /favicon.ico
+WARNING 2025-12-20 01:16:51,651 basehttp 21608 20320 "GET /favicon.ico HTTP/1.1" 404 3278
+WARNING 2025-12-20 01:16:51,651 basehttp 21608 20320 "GET /favicon.ico HTTP/1.1" 404 3278
+INFO 2025-12-20 01:41:29,911 autoreload 23196 19368 Watching for file changes with StatReloader
+INFO 2025-12-20 01:41:29,911 autoreload 23196 19368 Watching for file changes with StatReloader
+ERROR 2025-12-20 01:41:42,250 log 23196 21320 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'music'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'music' is not a registered namespace
+ERROR 2025-12-20 01:41:42,250 log 23196 21320 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'music'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'music' is not a registered namespace
+ERROR 2025-12-20 01:41:42,263 basehttp 23196 21320 "GET / HTTP/1.1" 500 139855
+ERROR 2025-12-20 01:41:42,263 basehttp 23196 21320 "GET / HTTP/1.1" 500 139855
+INFO 2025-12-20 01:42:19,266 autoreload 3036 15452 Watching for file changes with StatReloader
+INFO 2025-12-20 01:42:19,266 autoreload 3036 15452 Watching for file changes with StatReloader
+ERROR 2025-12-20 01:42:36,707 log 3036 13280 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'music'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'music' is not a registered namespace
+ERROR 2025-12-20 01:42:36,707 log 3036 13280 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'music'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'music' is not a registered namespace
+ERROR 2025-12-20 01:42:36,715 basehttp 3036 13280 "GET / HTTP/1.1" 500 139855
+ERROR 2025-12-20 01:42:36,715 basehttp 3036 13280 "GET / HTTP/1.1" 500 139855
+INFO 2025-12-20 01:44:03,356 autoreload 3036 15452 C:\Users\uldan\movie_music_catalog\music\urls.py changed, reloading.
+INFO 2025-12-20 01:44:03,356 autoreload 3036 15452 C:\Users\uldan\movie_music_catalog\music\urls.py changed, reloading.
+INFO 2025-12-20 01:44:05,885 autoreload 22112 19296 Watching for file changes with StatReloader
+INFO 2025-12-20 01:44:05,885 autoreload 22112 19296 Watching for file changes with StatReloader
+INFO 2025-12-20 01:44:25,768 autoreload 22112 19296 C:\Users\uldan\movie_music_catalog\accounts\urls.py changed, reloading.
+INFO 2025-12-20 01:44:25,768 autoreload 22112 19296 C:\Users\uldan\movie_music_catalog\accounts\urls.py changed, reloading.
+INFO 2025-12-20 01:44:28,190 autoreload 14932 23044 Watching for file changes with StatReloader
+INFO 2025-12-20 01:44:28,190 autoreload 14932 23044 Watching for file changes with StatReloader
+INFO 2025-12-20 01:44:48,891 autoreload 14932 23044 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 01:44:48,891 autoreload 14932 23044 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 01:44:51,129 autoreload 18288 16712 Watching for file changes with StatReloader
+INFO 2025-12-20 01:44:51,129 autoreload 18288 16712 Watching for file changes with StatReloader
+INFO 2025-12-20 01:45:00,316 autoreload 18288 16712 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 01:45:00,316 autoreload 18288 16712 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 01:45:02,484 autoreload 3808 21592 Watching for file changes with StatReloader
+INFO 2025-12-20 01:45:02,484 autoreload 3808 21592 Watching for file changes with StatReloader
+INFO 2025-12-20 01:45:41,662 autoreload 3808 21592 C:\Users\uldan\movie_music_catalog\movies\urls.py changed, reloading.
+INFO 2025-12-20 01:45:41,662 autoreload 3808 21592 C:\Users\uldan\movie_music_catalog\movies\urls.py changed, reloading.
+INFO 2025-12-20 01:45:42,572 autoreload 21920 4964 Watching for file changes with StatReloader
+INFO 2025-12-20 01:45:42,572 autoreload 21920 4964 Watching for file changes with StatReloader
+INFO 2025-12-20 01:47:30,700 basehttp 21920 21080 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:47:30,700 basehttp 21920 21080 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:47:30,847 basehttp 21920 21080 "GET /static/css/styles.css HTTP/1.1" 200 22643
+INFO 2025-12-20 01:47:30,847 basehttp 21920 21080 "GET /static/css/styles.css HTTP/1.1" 200 22643
+INFO 2025-12-20 01:47:48,673 basehttp 21920 17004 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:47:48,673 basehttp 21920 17004 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:47:48,904 basehttp 21920 17004 "GET /static/css/styles.css HTTP/1.1" 200 22643
+INFO 2025-12-20 01:47:48,904 basehttp 21920 17004 "GET /static/css/styles.css HTTP/1.1" 200 22643
+INFO 2025-12-20 01:48:03,066 basehttp 21920 4620 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 01:48:03,066 basehttp 21920 4620 "GET /accounts/register/ HTTP/1.1" 200 22196
+ERROR 2025-12-20 01:48:46,910 log 21920 14340 Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\accounts\views.py", line 24, in register
+    return redirect('login')
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR 2025-12-20 01:48:46,910 log 21920 14340 Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\accounts\views.py", line 24, in register
+    return redirect('login')
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR 2025-12-20 01:48:46,951 basehttp 21920 14340 "POST /accounts/register/ HTTP/1.1" 500 91857
+ERROR 2025-12-20 01:48:46,951 basehttp 21920 14340 "POST /accounts/register/ HTTP/1.1" 500 91857
+WARNING 2025-12-20 01:48:47,303 log 21920 14340 Not Found: /favicon.ico
+WARNING 2025-12-20 01:48:47,303 log 21920 14340 Not Found: /favicon.ico
+WARNING 2025-12-20 01:48:47,305 basehttp 21920 14340 "GET /favicon.ico HTTP/1.1" 404 3278
+WARNING 2025-12-20 01:48:47,305 basehttp 21920 14340 "GET /favicon.ico HTTP/1.1" 404 3278
+INFO 2025-12-20 01:49:06,547 basehttp 21920 13300 "GET /accounts/register/ HTTP/1.1" 200 22983
+INFO 2025-12-20 01:49:06,547 basehttp 21920 13300 "GET /accounts/register/ HTTP/1.1" 200 22983
+INFO 2025-12-20 01:49:09,643 basehttp 21920 12532 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 01:49:09,643 basehttp 21920 12532 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 01:49:09,678 basehttp 21920 12532 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:49:09,678 basehttp 21920 12532 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:49:17,453 basehttp 21920 12532 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 01:49:17,453 basehttp 21920 12532 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 01:49:26,409 basehttp 21920 12532 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:49:26,409 basehttp 21920 12532 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:49:30,291 basehttp 21920 22192 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 01:49:30,291 basehttp 21920 22192 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 01:49:34,691 basehttp 21920 22192 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 01:49:34,691 basehttp 21920 22192 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 01:49:37,386 basehttp 21920 7956 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:49:37,386 basehttp 21920 7956 "GET / HTTP/1.1" 200 15433
+ERROR 2025-12-20 01:49:44,237 log 21920 7956 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:49:44,237 log 21920 7956 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:49:44,273 basehttp 21920 7956 "GET /music/tracks/ HTTP/1.1" 500 87167
+ERROR 2025-12-20 01:49:44,273 basehttp 21920 7956 "GET /music/tracks/ HTTP/1.1" 500 87167
+ERROR 2025-12-20 01:50:02,540 log 21920 18376 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:50:02,540 log 21920 18376 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:50:02,546 basehttp 21920 18376 "GET /music/tracks/ HTTP/1.1" 500 87167
+ERROR 2025-12-20 01:50:02,546 basehttp 21920 18376 "GET /music/tracks/ HTTP/1.1" 500 87167
+INFO 2025-12-20 01:50:05,868 basehttp 21920 18376 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 01:50:05,868 basehttp 21920 18376 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 01:50:11,486 basehttp 21920 22616 "GET /music/albums/1/ HTTP/1.1" 200 13877
+INFO 2025-12-20 01:50:11,486 basehttp 21920 22616 "GET /music/albums/1/ HTTP/1.1" 200 13877
+INFO 2025-12-20 01:50:15,375 basehttp 21920 22616 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 01:50:15,375 basehttp 21920 22616 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 01:50:23,630 basehttp 21920 19292 "GET /music/albums/?q=love&genre= HTTP/1.1" 200 13884
+INFO 2025-12-20 01:50:23,630 basehttp 21920 19292 "GET /music/albums/?q=love&genre= HTTP/1.1" 200 13884
+INFO 2025-12-20 01:50:23,664 basehttp 21920 19292 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:50:23,664 basehttp 21920 19292 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:50:28,706 basehttp 21920 10504 "GET /music/albums/?q=love&genre= HTTP/1.1" 200 13884
+INFO 2025-12-20 01:50:28,706 basehttp 21920 10504 "GET /music/albums/?q=love&genre= HTTP/1.1" 200 13884
+ERROR 2025-12-20 01:50:41,202 log 21920 15988 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:50:41,202 log 21920 15988 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:50:41,206 basehttp 21920 15988 "GET /music/tracks/ HTTP/1.1" 500 87198
+ERROR 2025-12-20 01:50:41,206 basehttp 21920 15988 "GET /music/tracks/ HTTP/1.1" 500 87198
+INFO 2025-12-20 01:50:50,513 basehttp 21920 19440 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 01:50:50,513 basehttp 21920 19440 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 01:51:00,273 basehttp 21920 23724 "GET /movies/?q=mid&genre=&year=&min_rating= HTTP/1.1" 200 19336
+INFO 2025-12-20 01:51:00,273 basehttp 21920 23724 "GET /movies/?q=mid&genre=&year=&min_rating= HTTP/1.1" 200 19336
+INFO 2025-12-20 01:51:06,762 basehttp 21920 23724 "GET /movies/?q=hello&genre=&year=&min_rating= HTTP/1.1" 200 16594
+INFO 2025-12-20 01:51:06,762 basehttp 21920 23724 "GET /movies/?q=hello&genre=&year=&min_rating= HTTP/1.1" 200 16594
+INFO 2025-12-20 01:51:12,952 basehttp 21920 23556 "GET / HTTP/1.1" 200 15433
+INFO 2025-12-20 01:51:12,952 basehttp 21920 23556 "GET / HTTP/1.1" 200 15433
+ERROR 2025-12-20 01:51:17,598 log 21920 23556 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:51:17,598 log 21920 23556 Internal Server Error: /music/tracks/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 33, in track_list
+    tracks = tracks.order_by(sort_by)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 2221, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: album, album_id, artists, duration, favored_by_users, id, in_playlists, rating, title
+ERROR 2025-12-20 01:51:17,607 basehttp 21920 23556 "GET /music/tracks/?search=love HTTP/1.1" 500 87541
+ERROR 2025-12-20 01:51:17,607 basehttp 21920 23556 "GET /music/tracks/?search=love HTTP/1.1" 500 87541
+INFO 2025-12-20 01:52:31,202 autoreload 21920 4964 C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+INFO 2025-12-20 01:52:31,202 autoreload 21920 4964 C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+INFO 2025-12-20 01:52:39,313 autoreload 13704 20672 Watching for file changes with StatReloader
+INFO 2025-12-20 01:52:39,313 autoreload 13704 20672 Watching for file changes with StatReloader
+INFO 2025-12-20 01:52:58,581 autoreload 13704 20672 C:\Users\uldan\movie_music_catalog\catalog\urls.py changed, reloading.
+INFO 2025-12-20 01:52:58,581 autoreload 13704 20672 C:\Users\uldan\movie_music_catalog\catalog\urls.py changed, reloading.
+INFO 2025-12-20 01:53:02,150 autoreload 20384 7808 Watching for file changes with StatReloader
+INFO 2025-12-20 01:53:02,150 autoreload 20384 7808 Watching for file changes with StatReloader
+INFO 2025-12-20 01:54:26,973 autoreload 20384 7808 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 01:54:26,973 autoreload 20384 7808 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 01:54:28,751 autoreload 23184 19452 Watching for file changes with StatReloader
+INFO 2025-12-20 01:54:28,751 autoreload 23184 19452 Watching for file changes with StatReloader
+INFO 2025-12-20 01:54:37,064 basehttp 23184 9576 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 01:54:37,064 basehttp 23184 9576 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 01:54:37,147 basehttp 23184 9576 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:54:37,147 basehttp 23184 9576 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:55:19,218 basehttp 23184 14640 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 01:55:19,218 basehttp 23184 14640 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 01:55:19,289 basehttp 23184 14640 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 01:55:19,289 basehttp 23184 14640 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 01:55:45,810 basehttp 23184 14640 "POST /accounts/login/ HTTP/1.1" 200 18654
+INFO 2025-12-20 01:55:45,810 basehttp 23184 14640 "POST /accounts/login/ HTTP/1.1" 200 18654
+INFO 2025-12-20 01:56:17,091 basehttp 23184 20836 - Broken pipe from ('127.0.0.1', 51770)
+INFO 2025-12-20 01:56:17,091 basehttp 23184 20836 - Broken pipe from ('127.0.0.1', 51770)
+INFO 2025-12-20 01:56:18,634 basehttp 23184 11268 - Broken pipe from ('127.0.0.1', 56985)
+INFO 2025-12-20 01:56:18,634 basehttp 23184 11268 - Broken pipe from ('127.0.0.1', 56985)
+INFO 2025-12-20 01:56:19,087 basehttp 23184 24464 "POST /accounts/login/ HTTP/1.1" 200 18654
+INFO 2025-12-20 01:56:19,087 basehttp 23184 24464 "POST /accounts/login/ HTTP/1.1" 200 18654
+INFO 2025-12-20 01:56:27,094 basehttp 23184 24464 - Broken pipe from ('127.0.0.1', 52464)
+INFO 2025-12-20 01:56:27,094 basehttp 23184 24464 - Broken pipe from ('127.0.0.1', 52464)
+INFO 2025-12-20 01:56:31,469 basehttp 23184 21068 - Broken pipe from ('127.0.0.1', 62396)
+INFO 2025-12-20 01:56:31,469 basehttp 23184 21068 - Broken pipe from ('127.0.0.1', 62396)
+INFO 2025-12-20 01:56:33,652 basehttp 23184 10500 - Broken pipe from ('127.0.0.1', 52175)
+INFO 2025-12-20 01:56:33,652 basehttp 23184 10500 - Broken pipe from ('127.0.0.1', 52175)
+INFO 2025-12-20 01:56:34,175 basehttp 23184 14068 - Broken pipe from ('127.0.0.1', 50495)
+INFO 2025-12-20 01:56:34,175 basehttp 23184 14068 - Broken pipe from ('127.0.0.1', 50495)
+INFO 2025-12-20 01:56:35,117 basehttp 23184 8756 - Broken pipe from ('127.0.0.1', 50973)
+INFO 2025-12-20 01:56:35,117 basehttp 23184 8756 - Broken pipe from ('127.0.0.1', 50973)
+INFO 2025-12-20 01:56:35,601 basehttp 23184 3880 - Broken pipe from ('127.0.0.1', 57622)
+INFO 2025-12-20 01:56:35,608 basehttp 23184 22476 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 01:56:35,614 basehttp 23184 11248 - Broken pipe from ('127.0.0.1', 51839)
+INFO 2025-12-20 01:56:35,601 basehttp 23184 3880 - Broken pipe from ('127.0.0.1', 57622)
+INFO 2025-12-20 01:56:35,608 basehttp 23184 22476 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 01:56:35,614 basehttp 23184 11248 - Broken pipe from ('127.0.0.1', 51839)
+INFO 2025-12-20 01:56:35,934 basehttp 23184 22476 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:56:35,934 basehttp 23184 22476 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:58:51,311 basehttp 23184 24188 - Broken pipe from ('127.0.0.1', 53410)
+INFO 2025-12-20 01:58:51,311 basehttp 23184 24188 - Broken pipe from ('127.0.0.1', 53410)
+INFO 2025-12-20 01:58:51,712 basehttp 23184 6264 "POST /accounts/login/ HTTP/1.1" 200 18658
+INFO 2025-12-20 01:58:51,712 basehttp 23184 6264 "POST /accounts/login/ HTTP/1.1" 200 18658
+INFO 2025-12-20 01:58:52,010 basehttp 23184 6264 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:58:52,010 basehttp 23184 6264 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 01:58:57,316 basehttp 23184 6264 - Broken pipe from ('127.0.0.1', 63414)
+INFO 2025-12-20 01:58:57,316 basehttp 23184 6264 - Broken pipe from ('127.0.0.1', 63414)
+INFO 2025-12-20 01:58:57,920 basehttp 23184 15452 "POST /accounts/login/ HTTP/1.1" 200 18658
+INFO 2025-12-20 01:58:57,920 basehttp 23184 15452 "POST /accounts/login/ HTTP/1.1" 200 18658
+INFO 2025-12-20 02:05:34,084 autoreload 17348 11608 Watching for file changes with StatReloader
+INFO 2025-12-20 02:05:34,084 autoreload 17348 11608 Watching for file changes with StatReloader
+INFO 2025-12-20 02:05:50,018 basehttp 17348 10072 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:05:50,018 basehttp 17348 10072 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:05:50,444 basehttp 17348 10072 "GET /static/css/styles.css HTTP/1.1" 200 21482
+INFO 2025-12-20 02:05:50,444 basehttp 17348 10072 "GET /static/css/styles.css HTTP/1.1" 200 21482
+INFO 2025-12-20 02:05:54,122 basehttp 17348 10072 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:05:54,122 basehttp 17348 10072 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:05:57,809 basehttp 17348 13184 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:05:57,809 basehttp 17348 13184 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:06:00,023 basehttp 17348 13184 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:06:00,023 basehttp 17348 13184 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:06:19,620 basehttp 17348 6752 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:06:19,620 basehttp 17348 6752 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:06:19,647 basehttp 17348 6752 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:06:19,647 basehttp 17348 6752 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:06:19,720 basehttp 17348 6752 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:06:19,720 basehttp 17348 6752 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:06:24,860 basehttp 17348 6752 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:06:24,860 basehttp 17348 6752 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:07:11,339 basehttp 17348 18900 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:07:11,339 basehttp 17348 18900 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:07:11,383 basehttp 17348 18900 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:07:11,383 basehttp 17348 18900 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:07:13,068 basehttp 17348 18900 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:07:13,068 basehttp 17348 18900 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:07:20,875 basehttp 17348 18900 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:07:20,875 basehttp 17348 18900 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:07:27,615 basehttp 17348 18900 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:07:27,615 basehttp 17348 18900 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:07:31,855 basehttp 17348 18900 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:07:31,855 basehttp 17348 18900 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:07:33,267 basehttp 17348 18900 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 02:07:33,267 basehttp 17348 18900 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 02:07:34,316 basehttp 17348 18900 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:07:34,316 basehttp 17348 18900 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:08:44,179 autoreload 17348 11608 C:\Users\uldan\movie_music_catalog\accounts\admin.py changed, reloading.
+INFO 2025-12-20 02:08:44,179 autoreload 17348 11608 C:\Users\uldan\movie_music_catalog\accounts\admin.py changed, reloading.
+INFO 2025-12-20 02:08:47,240 autoreload 8584 10652 Watching for file changes with StatReloader
+INFO 2025-12-20 02:08:47,240 autoreload 8584 10652 Watching for file changes with StatReloader
+INFO 2025-12-20 02:08:48,516 basehttp 8584 7224 "GET /movies/1/ HTTP/1.1" 200 17933
+INFO 2025-12-20 02:08:48,516 basehttp 8584 7224 "GET /movies/1/ HTTP/1.1" 200 17933
+INFO 2025-12-20 02:08:48,579 basehttp 8584 7224 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:08:48,579 basehttp 8584 7224 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:08:56,182 basehttp 8584 16556 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:08:56,182 basehttp 8584 16556 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:09:23,679 autoreload 8584 10652 C:\Users\uldan\movie_music_catalog\accounts\admin.py changed, reloading.
+INFO 2025-12-20 02:09:23,679 autoreload 8584 10652 C:\Users\uldan\movie_music_catalog\accounts\admin.py changed, reloading.
+INFO 2025-12-20 02:09:25,079 autoreload 12592 16020 Watching for file changes with StatReloader
+INFO 2025-12-20 02:09:25,079 autoreload 12592 16020 Watching for file changes with StatReloader
+INFO 2025-12-20 02:09:38,100 basehttp 12592 18564 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:09:38,100 basehttp 12592 18564 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:09:38,122 basehttp 12592 18564 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:09:38,122 basehttp 12592 18564 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:09:41,871 basehttp 12592 6844 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:09:41,871 basehttp 12592 6844 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:09:49,565 basehttp 12592 6844 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:09:49,565 basehttp 12592 6844 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:09:53,094 basehttp 12592 19204 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:09:53,094 basehttp 12592 19204 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:09:56,193 basehttp 12592 19204 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:09:56,193 basehttp 12592 19204 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:10:19,333 basehttp 12592 6108 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:10:19,333 basehttp 12592 6108 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:10:19,353 basehttp 12592 6108 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:10:19,353 basehttp 12592 6108 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:10:23,892 basehttp 12592 6108 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:10:23,892 basehttp 12592 6108 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:10:23,936 basehttp 12592 6108 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:10:23,936 basehttp 12592 6108 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:10:35,098 basehttp 12592 6108 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:10:35,098 basehttp 12592 6108 "POST /accounts/login/ HTTP/1.1" 200 18649
+INFO 2025-12-20 02:10:39,774 basehttp 12592 6108 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:10:39,774 basehttp 12592 6108 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:11:10,746 basehttp 12592 3980 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:11:10,746 basehttp 12592 3980 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:11:10,761 basehttp 12592 3980 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:11:10,761 basehttp 12592 3980 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:11:20,668 basehttp 12592 3980 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:11:20,668 basehttp 12592 3980 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:11:20,702 basehttp 12592 3980 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:11:20,702 basehttp 12592 3980 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:11:23,861 basehttp 12592 3980 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:11:23,861 basehttp 12592 3980 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:12:02,171 basehttp 12592 15288 "GET /admin HTTP/1.1" 301 0
+INFO 2025-12-20 02:12:02,171 basehttp 12592 15288 "GET /admin HTTP/1.1" 301 0
+INFO 2025-12-20 02:12:02,185 basehttp 12592 10624 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:12:02,185 basehttp 12592 10624 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:12:02,702 basehttp 12592 10624 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-12-20 02:12:02,702 basehttp 12592 10624 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-12-20 02:12:03,255 basehttp 12592 10624 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-12-20 02:12:03,255 basehttp 12592 10624 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-12-20 02:12:03,382 basehttp 12592 1232 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-12-20 02:12:03,400 basehttp 12592 5740 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-12-20 02:12:03,401 basehttp 12592 7280 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-12-20 02:12:03,382 basehttp 12592 1232 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-12-20 02:12:03,401 basehttp 12592 7280 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-12-20 02:12:03,476 basehttp 12592 10624 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-12-20 02:12:03,400 basehttp 12592 5740 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-12-20 02:12:03,476 basehttp 12592 10624 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-12-20 02:12:03,635 basehttp 12592 8864 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2025-12-20 02:12:03,635 basehttp 12592 8864 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2025-12-20 02:12:03,655 basehttp 12592 17440 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-12-20 02:12:03,655 basehttp 12592 17440 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+WARNING 2025-12-20 02:12:03,728 log 12592 17440 Not Found: /favicon.ico
+WARNING 2025-12-20 02:12:03,728 log 12592 17440 Not Found: /favicon.ico
+WARNING 2025-12-20 02:12:03,730 basehttp 12592 17440 "GET /favicon.ico HTTP/1.1" 404 3278
+WARNING 2025-12-20 02:12:03,730 basehttp 12592 17440 "GET /favicon.ico HTTP/1.1" 404 3278
+INFO 2025-12-20 02:13:20,319 autoreload 12592 16020 C:\Users\uldan\movie_music_catalog\catalog\views.py changed, reloading.
+INFO 2025-12-20 02:13:20,319 autoreload 12592 16020 C:\Users\uldan\movie_music_catalog\catalog\views.py changed, reloading.
+INFO 2025-12-20 02:13:25,012 autoreload 11184 1872 Watching for file changes with StatReloader
+INFO 2025-12-20 02:13:25,012 autoreload 11184 1872 Watching for file changes with StatReloader
+INFO 2025-12-20 02:13:33,635 autoreload 11184 1872 C:\Users\uldan\movie_music_catalog\catalog\urls.py changed, reloading.
+INFO 2025-12-20 02:13:33,635 autoreload 11184 1872 C:\Users\uldan\movie_music_catalog\catalog\urls.py changed, reloading.
+INFO 2025-12-20 02:13:35,271 autoreload 15068 17628 Watching for file changes with StatReloader
+INFO 2025-12-20 02:13:35,271 autoreload 15068 17628 Watching for file changes with StatReloader
+INFO 2025-12-20 02:13:40,557 autoreload 15068 17628 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:13:40,557 autoreload 15068 17628 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:13:43,708 autoreload 11748 4256 Watching for file changes with StatReloader
+INFO 2025-12-20 02:13:43,708 autoreload 11748 4256 Watching for file changes with StatReloader
+INFO 2025-12-20 02:13:45,900 autoreload 11748 4256 C:\Users\uldan\movie_music_catalog\music\urls.py changed, reloading.
+INFO 2025-12-20 02:13:45,900 autoreload 11748 4256 C:\Users\uldan\movie_music_catalog\music\urls.py changed, reloading.
+INFO 2025-12-20 02:13:47,619 autoreload 18824 8096 Watching for file changes with StatReloader
+INFO 2025-12-20 02:13:47,619 autoreload 18824 8096 Watching for file changes with StatReloader
+INFO 2025-12-20 02:14:25,513 autoreload 18824 8096 C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+INFO 2025-12-20 02:14:25,513 autoreload 18824 8096 C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+INFO 2025-12-20 02:14:28,142 autoreload 2012 19152 Watching for file changes with StatReloader
+INFO 2025-12-20 02:14:28,142 autoreload 2012 19152 Watching for file changes with StatReloader
+INFO 2025-12-20 02:14:50,519 autoreload 2012 19152 C:\Users\uldan\movie_music_catalog\catalog\urls.py changed, reloading.
+INFO 2025-12-20 02:14:50,519 autoreload 2012 19152 C:\Users\uldan\movie_music_catalog\catalog\urls.py changed, reloading.
+INFO 2025-12-20 02:14:51,688 autoreload 18728 18476 Watching for file changes with StatReloader
+INFO 2025-12-20 02:14:51,688 autoreload 18728 18476 Watching for file changes with StatReloader
+INFO 2025-12-20 02:15:05,457 basehttp 18728 17924 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:15:05,457 basehttp 18728 17924 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:15:05,485 basehttp 18728 17924 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:15:05,485 basehttp 18728 17924 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:15:08,047 basehttp 18728 17924 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:15:08,047 basehttp 18728 17924 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:15:09,984 basehttp 18728 17924 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:15:09,984 basehttp 18728 17924 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:15:11,686 basehttp 18728 14096 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:15:11,686 basehttp 18728 14096 "GET /music/tracks/ HTTP/1.1" 200 13730
+INFO 2025-12-20 02:15:12,705 basehttp 18728 14096 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 02:15:12,705 basehttp 18728 14096 "GET /music/albums/ HTTP/1.1" 200 13880
+INFO 2025-12-20 02:15:13,797 basehttp 18728 14096 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:15:13,797 basehttp 18728 14096 "GET /movies/ HTTP/1.1" 200 19118
+INFO 2025-12-20 02:15:17,242 basehttp 18728 14096 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:15:17,242 basehttp 18728 14096 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:15:21,879 basehttp 18728 19096 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:15:21,879 basehttp 18728 19096 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:15:26,327 basehttp 18728 19096 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:15:26,327 basehttp 18728 19096 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:15:43,487 basehttp 18728 15784 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:15:43,487 basehttp 18728 15784 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:15:43,519 basehttp 18728 15784 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:15:43,519 basehttp 18728 15784 "GET /accounts/login/ HTTP/1.1" 200 18709
+INFO 2025-12-20 02:15:46,639 basehttp 18728 15784 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:15:46,639 basehttp 18728 15784 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:16:25,890 basehttp 18728 13848 "GET /admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:16:25,890 basehttp 18728 13848 "GET /admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:16:25,915 basehttp 18728 13848 "GET /accounts/login/?next=/admin-panel/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:16:25,915 basehttp 18728 13848 "GET /accounts/login/?next=/admin-panel/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:16:25,972 basehttp 18728 13848 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:16:25,972 basehttp 18728 13848 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:16:36,574 basehttp 18728 18888 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:16:36,574 basehttp 18728 18888 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:16:52,284 basehttp 18728 7952 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:16:52,284 basehttp 18728 7952 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:16:59,042 basehttp 18728 7952 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:16:59,042 basehttp 18728 7952 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:17:07,566 basehttp 18728 17860 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:17:07,566 basehttp 18728 17860 "POST /accounts/login/ HTTP/1.1" 200 18648
+INFO 2025-12-20 02:20:38,084 autoreload 18728 18476 C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+INFO 2025-12-20 02:20:38,084 autoreload 18728 18476 C:\Users\uldan\movie_music_catalog\accounts\views.py changed, reloading.
+INFO 2025-12-20 02:21:02,483 autoreload 18644 19328 Watching for file changes with StatReloader
+INFO 2025-12-20 02:21:02,483 autoreload 18644 19328 Watching for file changes with StatReloader
+INFO 2025-12-20 02:23:07,905 autoreload 18644 19328 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:23:07,905 autoreload 18644 19328 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:23:24,723 autoreload 17300 144 Watching for file changes with StatReloader
+INFO 2025-12-20 02:23:24,723 autoreload 17300 144 Watching for file changes with StatReloader
+INFO 2025-12-20 02:23:36,887 autoreload 17300 144 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:23:36,887 autoreload 17300 144 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:23:44,928 autoreload 17956 7416 Watching for file changes with StatReloader
+INFO 2025-12-20 02:23:44,928 autoreload 17956 7416 Watching for file changes with StatReloader
+INFO 2025-12-20 02:23:56,393 autoreload 17956 7416 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:23:56,393 autoreload 17956 7416 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:24:01,919 autoreload 3840 8912 Watching for file changes with StatReloader
+INFO 2025-12-20 02:24:01,919 autoreload 3840 8912 Watching for file changes with StatReloader
+INFO 2025-12-20 02:24:32,771 autoreload 3840 8912 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:24:32,771 autoreload 3840 8912 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:24:36,882 autoreload 15880 18468 Watching for file changes with StatReloader
+INFO 2025-12-20 02:24:36,882 autoreload 15880 18468 Watching for file changes with StatReloader
+INFO 2025-12-20 02:24:42,149 basehttp 15880 3716 "POST /accounts/login/ HTTP/1.1" 200 19491
+INFO 2025-12-20 02:24:42,149 basehttp 15880 3716 "POST /accounts/login/ HTTP/1.1" 200 19491
+INFO 2025-12-20 02:24:42,178 basehttp 15880 3716 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:24:42,178 basehttp 15880 3716 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:24:44,333 basehttp 15880 3716 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:24:44,333 basehttp 15880 3716 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 02:24:50,651 basehttp 15880 3716 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:24:50,651 basehttp 15880 3716 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:25:10,575 basehttp 15880 3716 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:25:10,575 basehttp 15880 3716 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:25:10,642 basehttp 15880 3716 "GET / HTTP/1.1" 200 16376
+INFO 2025-12-20 02:25:10,642 basehttp 15880 3716 "GET / HTTP/1.1" 200 16376
+INFO 2025-12-20 02:25:22,868 basehttp 15880 3716 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:25:22,868 basehttp 15880 3716 "GET /music/tracks/ HTTP/1.1" 200 14219
+ERROR 2025-12-20 02:25:27,675 log 15880 3716 Internal Server Error: /music/playlists/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 135, in playlist_list
+    return render(request, 'music/playlist_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: music/playlist_list.html
+ERROR 2025-12-20 02:25:27,675 log 15880 3716 Internal Server Error: /music/playlists/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 135, in playlist_list
+    return render(request, 'music/playlist_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: music/playlist_list.html
+ERROR 2025-12-20 02:25:27,689 basehttp 15880 3716 "GET /music/playlists/ HTTP/1.1" 500 93234
+ERROR 2025-12-20 02:25:27,689 basehttp 15880 3716 "GET /music/playlists/ HTTP/1.1" 500 93234
+INFO 2025-12-20 02:25:33,194 basehttp 15880 3716 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:25:33,194 basehttp 15880 3716 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:25:34,716 basehttp 15880 3716 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:25:34,716 basehttp 15880 3716 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:25:36,296 basehttp 15880 3716 "GET /movies/ HTTP/1.1" 200 20329
+INFO 2025-12-20 02:25:36,296 basehttp 15880 3716 "GET /movies/ HTTP/1.1" 200 20329
+ERROR 2025-12-20 02:25:37,723 log 15880 3716 Internal Server Error: /music/playlists/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 135, in playlist_list
+    return render(request, 'music/playlist_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: music/playlist_list.html
+ERROR 2025-12-20 02:25:37,723 log 15880 3716 Internal Server Error: /music/playlists/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 135, in playlist_list
+    return render(request, 'music/playlist_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: music/playlist_list.html
+ERROR 2025-12-20 02:25:37,727 basehttp 15880 3716 "GET /music/playlists/ HTTP/1.1" 500 93241
+ERROR 2025-12-20 02:25:37,727 basehttp 15880 3716 "GET /music/playlists/ HTTP/1.1" 500 93241
+INFO 2025-12-20 02:25:42,212 basehttp 15880 3716 "GET /accounts/profile/ HTTP/1.1" 200 21916
+INFO 2025-12-20 02:25:42,212 basehttp 15880 3716 "GET /accounts/profile/ HTTP/1.1" 200 21916
+INFO 2025-12-20 02:25:49,288 basehttp 15880 3716 "GET /movies/ HTTP/1.1" 200 20329
+INFO 2025-12-20 02:25:49,288 basehttp 15880 3716 "GET /movies/ HTTP/1.1" 200 20329
+INFO 2025-12-20 02:25:51,831 basehttp 15880 3716 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:25:51,831 basehttp 15880 3716 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:25:51,872 basehttp 15880 3716 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 02:25:51,872 basehttp 15880 3716 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 02:25:54,105 basehttp 15880 3716 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:25:54,105 basehttp 15880 3716 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:25:59,629 basehttp 15880 3716 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:25:59,629 basehttp 15880 3716 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:25:59,657 basehttp 15880 3716 "GET / HTTP/1.1" 200 16337
+INFO 2025-12-20 02:25:59,657 basehttp 15880 3716 "GET / HTTP/1.1" 200 16337
+ERROR 2025-12-20 02:26:05,653 log 15880 3716 Internal Server Error: /music/playlists/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 135, in playlist_list
+    return render(request, 'music/playlist_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: music/playlist_list.html
+ERROR 2025-12-20 02:26:05,653 log 15880 3716 Internal Server Error: /music/playlists/
+Traceback (most recent call last):
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\uldan\movie_music_catalog\music\views.py", line 135, in playlist_list
+    return render(request, 'music/playlist_list.html', context)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\uldan\movie_music_catalog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: music/playlist_list.html
+ERROR 2025-12-20 02:26:05,662 basehttp 15880 3716 "GET /music/playlists/ HTTP/1.1" 500 93234
+ERROR 2025-12-20 02:26:05,662 basehttp 15880 3716 "GET /music/playlists/ HTTP/1.1" 500 93234
+INFO 2025-12-20 02:28:46,594 autoreload 15880 18468 C:\Users\uldan\movie_music_catalog\catalog\views.py changed, reloading.
+INFO 2025-12-20 02:28:46,594 autoreload 15880 18468 C:\Users\uldan\movie_music_catalog\catalog\views.py changed, reloading.
+INFO 2025-12-20 02:28:48,182 autoreload 18684 15868 Watching for file changes with StatReloader
+INFO 2025-12-20 02:28:48,182 autoreload 18684 15868 Watching for file changes with StatReloader
+INFO 2025-12-20 02:30:27,724 autoreload 18684 15868 C:\Users\uldan\movie_music_catalog\catalog\views.py changed, reloading.
+INFO 2025-12-20 02:30:27,724 autoreload 18684 15868 C:\Users\uldan\movie_music_catalog\catalog\views.py changed, reloading.
+INFO 2025-12-20 02:30:28,719 autoreload 11748 15372 Watching for file changes with StatReloader
+INFO 2025-12-20 02:30:28,719 autoreload 11748 15372 Watching for file changes with StatReloader
+INFO 2025-12-20 02:30:37,093 basehttp 11748 14380 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:30:37,093 basehttp 11748 14380 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:30:37,127 basehttp 11748 14380 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:30:37,127 basehttp 11748 14380 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:30:40,251 basehttp 11748 14380 "GET /music/playlists/ HTTP/1.1" 200 11920
+INFO 2025-12-20 02:30:40,251 basehttp 11748 14380 "GET /music/playlists/ HTTP/1.1" 200 11920
+INFO 2025-12-20 02:30:56,832 basehttp 11748 14380 "POST /music/playlists/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:30:56,832 basehttp 11748 14380 "POST /music/playlists/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:30:56,856 basehttp 11748 14380 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:30:56,856 basehttp 11748 14380 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:31:29,291 basehttp 11748 14380 "GET /music/playlists/1/ HTTP/1.1" 200 11760
+INFO 2025-12-20 02:31:29,291 basehttp 11748 14380 "GET /music/playlists/1/ HTTP/1.1" 200 11760
+INFO 2025-12-20 02:31:34,948 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:31:34,948 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:31:39,285 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:31:39,285 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:31:40,777 basehttp 11748 14380 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:31:40,777 basehttp 11748 14380 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:31:42,228 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:31:42,228 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:31:43,115 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:31:43,115 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:31:44,117 basehttp 11748 14380 "GET /movies/ HTTP/1.1" 200 20329
+INFO 2025-12-20 02:31:44,117 basehttp 11748 14380 "GET /movies/ HTTP/1.1" 200 20329
+INFO 2025-12-20 02:31:45,885 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:31:45,885 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:31:47,043 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:31:47,043 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:32:49,187 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:32:49,187 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:32:50,915 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:32:50,915 basehttp 11748 14380 "GET /music/tracks/ HTTP/1.1" 200 14219
+INFO 2025-12-20 02:32:52,203 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:32:52,203 basehttp 11748 14380 "GET /music/albums/ HTTP/1.1" 200 14369
+INFO 2025-12-20 02:32:54,221 basehttp 11748 14380 "GET /movies/ HTTP/1.1" 200 20329
+INFO 2025-12-20 02:32:54,221 basehttp 11748 14380 "GET /movies/ HTTP/1.1" 200 20329
+INFO 2025-12-20 02:33:30,541 autoreload 11748 15372 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:33:30,541 autoreload 11748 15372 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:33:32,252 autoreload 18788 10504 Watching for file changes with StatReloader
+INFO 2025-12-20 02:33:32,252 autoreload 18788 10504 Watching for file changes with StatReloader
+INFO 2025-12-20 02:33:36,009 autoreload 18788 10504 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:33:36,009 autoreload 18788 10504 C:\Users\uldan\movie_music_catalog\music\views.py changed, reloading.
+INFO 2025-12-20 02:33:37,424 autoreload 6724 18492 Watching for file changes with StatReloader
+INFO 2025-12-20 02:33:37,424 autoreload 6724 18492 Watching for file changes with StatReloader
+INFO 2025-12-20 02:33:43,708 autoreload 6724 18492 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:33:43,708 autoreload 6724 18492 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:33:45,304 autoreload 12464 18096 Watching for file changes with StatReloader
+INFO 2025-12-20 02:33:45,304 autoreload 12464 18096 Watching for file changes with StatReloader
+INFO 2025-12-20 02:34:39,320 autoreload 12464 18096 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:34:39,320 autoreload 12464 18096 C:\Users\uldan\movie_music_catalog\movies\views.py changed, reloading.
+INFO 2025-12-20 02:34:40,091 autoreload 8684 3444 Watching for file changes with StatReloader
+INFO 2025-12-20 02:34:40,091 autoreload 8684 3444 Watching for file changes with StatReloader
+INFO 2025-12-20 02:34:55,570 basehttp 8684 8804 "GET /movies/ HTTP/1.1" 200 20733
+INFO 2025-12-20 02:34:55,570 basehttp 8684 8804 "GET /movies/ HTTP/1.1" 200 20733
+INFO 2025-12-20 02:34:55,587 basehttp 8684 8804 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:34:55,587 basehttp 8684 8804 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:34:59,188 basehttp 8684 8804 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:34:59,188 basehttp 8684 8804 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:35:01,185 basehttp 8684 8804 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:35:01,185 basehttp 8684 8804 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:35:03,485 basehttp 8684 8804 "GET /movies/ HTTP/1.1" 200 20733
+INFO 2025-12-20 02:35:03,485 basehttp 8684 8804 "GET /movies/ HTTP/1.1" 200 20733
+INFO 2025-12-20 02:35:10,316 basehttp 8684 8804 "GET /movies/1/ HTTP/1.1" 200 21467
+INFO 2025-12-20 02:35:10,316 basehttp 8684 8804 "GET /movies/1/ HTTP/1.1" 200 21467
+INFO 2025-12-20 02:35:16,369 basehttp 8684 8804 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:35:16,369 basehttp 8684 8804 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:35:19,315 basehttp 8684 8804 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:35:19,315 basehttp 8684 8804 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:35:22,197 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:35:22,197 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:35:54,667 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:35:54,667 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:35:56,026 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:35:56,026 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:35:57,919 basehttp 8684 8804 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:35:57,919 basehttp 8684 8804 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:36:02,724 basehttp 8684 8804 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:36:02,724 basehttp 8684 8804 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:36:57,560 basehttp 8684 8804 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:36:57,560 basehttp 8684 8804 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:37:00,923 basehttp 8684 8804 "GET /movies/ HTTP/1.1" 200 20733
+INFO 2025-12-20 02:37:00,923 basehttp 8684 8804 "GET /movies/ HTTP/1.1" 200 20733
+INFO 2025-12-20 02:37:02,250 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:37:02,250 basehttp 8684 8804 "GET /music/playlists/ HTTP/1.1" 200 13849
+WARNING 2025-12-20 02:37:21,965 log 8684 8804 Not Found: /music/admin
+WARNING 2025-12-20 02:37:21,965 log 8684 8804 Not Found: /music/admin
+WARNING 2025-12-20 02:37:21,967 basehttp 8684 8804 "GET /music/admin HTTP/1.1" 404 6046
+WARNING 2025-12-20 02:37:21,967 basehttp 8684 8804 "GET /music/admin HTTP/1.1" 404 6046
+INFO 2025-12-20 02:37:31,075 basehttp 8684 8804 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:37:31,075 basehttp 8684 8804 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:37:31,215 basehttp 8684 8804 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:37:31,215 basehttp 8684 8804 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:37:34,157 basehttp 8684 8804 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:37:34,157 basehttp 8684 8804 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:37:43,012 basehttp 8684 8804 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:37:43,012 basehttp 8684 8804 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:37:57,109 basehttp 8684 8804 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:37:57,109 basehttp 8684 8804 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:41:18,267 autoreload 144 15880 Watching for file changes with StatReloader
+INFO 2025-12-20 02:41:18,267 autoreload 144 15880 Watching for file changes with StatReloader
+INFO 2025-12-20 02:41:26,945 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:41:26,945 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:41:36,600 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:41:36,600 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:41:45,758 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:41:45,758 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:42:01,839 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:42:01,839 basehttp 144 19196 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:42:12,009 basehttp 144 19196 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:42:12,009 basehttp 144 19196 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:42:12,038 basehttp 144 19196 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:42:12,038 basehttp 144 19196 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:42:19,567 basehttp 144 6324 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:42:19,567 basehttp 144 6324 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:42:19,617 basehttp 144 6324 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:42:19,617 basehttp 144 6324 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:42:33,535 basehttp 144 6324 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:42:33,535 basehttp 144 6324 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:42:42,189 basehttp 144 6324 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:42:42,189 basehttp 144 6324 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:45:45,343 basehttp 144 9808 "GET /admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:45:45,343 basehttp 144 9808 "GET /admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:45:45,368 basehttp 144 9808 "GET /accounts/login/?next=/admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:45:45,368 basehttp 144 9808 "GET /accounts/login/?next=/admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:45:45,404 basehttp 144 9808 "GET / HTTP/1.1" 200 16330
+INFO 2025-12-20 02:45:45,404 basehttp 144 9808 "GET / HTTP/1.1" 200 16330
+INFO 2025-12-20 02:45:53,841 basehttp 144 6380 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:45:53,841 basehttp 144 6380 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:45:57,278 basehttp 144 6380 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:45:57,278 basehttp 144 6380 "GET /music/albums/ HTTP/1.1" 200 14920
+INFO 2025-12-20 02:46:00,711 basehttp 144 6380 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:46:00,711 basehttp 144 6380 "GET /music/playlists/ HTTP/1.1" 200 13849
+INFO 2025-12-20 02:46:03,388 basehttp 144 6380 "GET /accounts/profile/ HTTP/1.1" 200 21916
+INFO 2025-12-20 02:46:03,388 basehttp 144 6380 "GET /accounts/profile/ HTTP/1.1" 200 21916
+INFO 2025-12-20 02:46:06,599 basehttp 144 6380 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:46:06,599 basehttp 144 6380 "GET /music/tracks/ HTTP/1.1" 200 14592
+INFO 2025-12-20 02:46:09,660 basehttp 144 6380 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:46:09,660 basehttp 144 6380 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:46:26,509 basehttp 144 6380 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:46:26,509 basehttp 144 6380 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:46:26,543 basehttp 144 6380 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:46:26,543 basehttp 144 6380 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:46:55,161 basehttp 144 15896 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:46:55,161 basehttp 144 15896 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:46:59,592 basehttp 144 15896 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:46:59,592 basehttp 144 15896 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:47:01,067 basehttp 144 15896 - Broken pipe from ('127.0.0.1', 61640)
+INFO 2025-12-20 02:47:01,067 basehttp 144 15896 - Broken pipe from ('127.0.0.1', 61640)
+INFO 2025-12-20 02:47:01,278 basehttp 144 3608 - Broken pipe from ('127.0.0.1', 50854)
+INFO 2025-12-20 02:47:01,278 basehttp 144 3608 - Broken pipe from ('127.0.0.1', 50854)
+INFO 2025-12-20 02:47:01,524 basehttp 144 7344 - Broken pipe from ('127.0.0.1', 61589)
+INFO 2025-12-20 02:47:01,524 basehttp 144 7344 - Broken pipe from ('127.0.0.1', 61589)
+INFO 2025-12-20 02:47:01,758 basehttp 144 1860 - Broken pipe from ('127.0.0.1', 63893)
+INFO 2025-12-20 02:47:01,758 basehttp 144 1860 - Broken pipe from ('127.0.0.1', 63893)
+INFO 2025-12-20 02:47:01,900 basehttp 144 1824 - Broken pipe from ('127.0.0.1', 63317)
+INFO 2025-12-20 02:47:01,900 basehttp 144 1824 - Broken pipe from ('127.0.0.1', 63317)
+INFO 2025-12-20 02:47:02,128 basehttp 144 15376 - Broken pipe from ('127.0.0.1', 57223)
+INFO 2025-12-20 02:47:02,128 basehttp 144 15376 - Broken pipe from ('127.0.0.1', 57223)
+INFO 2025-12-20 02:47:02,379 basehttp 144 10284 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:47:02,379 basehttp 144 10284 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 02:47:24,065 basehttp 144 10284 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:47:24,065 basehttp 144 10284 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:50:11,695 basehttp 144 16016 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:50:11,695 basehttp 144 16016 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:50:19,650 basehttp 144 16016 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:50:19,650 basehttp 144 16016 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:50:19,689 basehttp 144 16016 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:50:19,689 basehttp 144 16016 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:50:28,201 basehttp 144 16016 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:50:28,201 basehttp 144 16016 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:50:28,248 basehttp 144 16016 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 02:50:28,248 basehttp 144 16016 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 02:50:30,720 basehttp 144 16016 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:50:30,720 basehttp 144 16016 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:50:36,927 basehttp 144 16016 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:50:36,927 basehttp 144 16016 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:51:00,627 basehttp 144 16016 "POST /accounts/register/ HTTP/1.1" 200 23875
+INFO 2025-12-20 02:51:00,627 basehttp 144 16016 "POST /accounts/register/ HTTP/1.1" 200 23875
+INFO 2025-12-20 02:51:06,340 basehttp 144 16016 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:51:06,340 basehttp 144 16016 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:51:13,350 basehttp 144 16016 "POST /accounts/login/ HTTP/1.1" 200 19492
+INFO 2025-12-20 02:51:13,350 basehttp 144 16016 "POST /accounts/login/ HTTP/1.1" 200 19492
+INFO 2025-12-20 02:51:26,465 basehttp 144 16016 "POST /accounts/login/ HTTP/1.1" 200 19492
+INFO 2025-12-20 02:51:26,465 basehttp 144 16016 "POST /accounts/login/ HTTP/1.1" 200 19492
+INFO 2025-12-20 02:51:35,984 basehttp 144 16016 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:51:35,984 basehttp 144 16016 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 02:51:58,905 basehttp 144 16016 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:51:58,905 basehttp 144 16016 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:51:58,953 basehttp 144 16016 "GET / HTTP/1.1" 200 16380
+INFO 2025-12-20 02:51:58,953 basehttp 144 16016 "GET / HTTP/1.1" 200 16380
+INFO 2025-12-20 02:53:28,423 autoreload 5788 17352 Watching for file changes with StatReloader
+INFO 2025-12-20 02:53:28,423 autoreload 5788 17352 Watching for file changes with StatReloader
+INFO 2025-12-20 02:53:32,220 basehttp 5788 8520 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:53:32,220 basehttp 5788 8520 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:53:32,455 basehttp 5788 8520 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 02:53:32,455 basehttp 5788 8520 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 02:53:34,807 basehttp 5788 14620 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:53:34,807 basehttp 5788 14620 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 02:53:49,598 basehttp 5788 14620 "POST /accounts/login/ HTTP/1.1" 200 19491
+INFO 2025-12-20 02:53:49,598 basehttp 5788 14620 "POST /accounts/login/ HTTP/1.1" 200 19491
+INFO 2025-12-20 02:54:04,769 basehttp 5788 14620 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:54:04,769 basehttp 5788 14620 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:54:04,822 basehttp 5788 14620 "GET / HTTP/1.1" 200 16337
+INFO 2025-12-20 02:54:04,822 basehttp 5788 14620 "GET / HTTP/1.1" 200 16337
+INFO 2025-12-20 02:54:15,553 basehttp 5788 14620 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:54:15,553 basehttp 5788 14620 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:54:15,760 basehttp 5788 14620 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:54:15,760 basehttp 5788 14620 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:54:21,151 basehttp 5788 14620 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:54:21,151 basehttp 5788 14620 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:24,599 autoreload 19108 18656 Watching for file changes with StatReloader
+INFO 2025-12-20 02:55:24,599 autoreload 19108 18656 Watching for file changes with StatReloader
+INFO 2025-12-20 02:55:31,067 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:31,067 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:33,464 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:33,464 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:35,265 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:35,265 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:37,176 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:37,176 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:40,904 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:40,904 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:42,080 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:42,080 basehttp 19108 8244 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:55:58,710 basehttp 19108 8244 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:55:58,710 basehttp 19108 8244 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:55:58,758 basehttp 19108 8244 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:55:58,758 basehttp 19108 8244 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:56:01,169 basehttp 19108 8244 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:56:01,169 basehttp 19108 8244 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 02:56:01,209 basehttp 19108 8244 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:56:01,209 basehttp 19108 8244 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 02:56:08,196 basehttp 19108 6324 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:56:08,196 basehttp 19108 6324 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 02:56:08,223 basehttp 19108 6324 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:56:08,223 basehttp 19108 6324 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 02:56:19,375 basehttp 19108 6324 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 02:56:19,375 basehttp 19108 6324 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 03:03:33,743 autoreload 13488 7416 Watching for file changes with StatReloader
+INFO 2025-12-20 03:03:33,743 autoreload 13488 7416 Watching for file changes with StatReloader
+INFO 2025-12-20 03:03:41,218 basehttp 13488 7556 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:03:41,218 basehttp 13488 7556 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:03:41,371 basehttp 13488 7556 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:03:41,371 basehttp 13488 7556 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:03:43,413 basehttp 13488 7556 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 03:03:43,413 basehttp 13488 7556 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 03:03:43,460 basehttp 13488 7556 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 03:03:43,460 basehttp 13488 7556 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 03:04:32,846 basehttp 13488 3048 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 03:04:32,846 basehttp 13488 3048 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 03:04:38,776 basehttp 13488 4220 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:04:38,776 basehttp 13488 4220 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:04:38,813 basehttp 13488 4220 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:04:38,813 basehttp 13488 4220 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:04:43,028 basehttp 13488 4220 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 03:04:43,028 basehttp 13488 4220 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 03:04:47,003 basehttp 13488 4220 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:04:47,003 basehttp 13488 4220 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:06:21,843 autoreload 9240 16472 Watching for file changes with StatReloader
+INFO 2025-12-20 03:06:21,843 autoreload 9240 16472 Watching for file changes with StatReloader
+INFO 2025-12-20 03:06:32,984 basehttp 9240 16540 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 03:06:32,984 basehttp 9240 16540 "GET / HTTP/1.1" 200 15760
+INFO 2025-12-20 03:06:34,925 basehttp 9240 16540 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 03:06:34,925 basehttp 9240 16540 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 03:06:48,342 basehttp 9240 15516 "POST /accounts/login/ HTTP/1.1" 200 19492
+INFO 2025-12-20 03:06:48,342 basehttp 9240 15516 "POST /accounts/login/ HTTP/1.1" 200 19492
+INFO 2025-12-20 03:06:52,680 basehttp 9240 18852 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 03:06:52,680 basehttp 9240 18852 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 03:07:09,285 basehttp 9240 18824 "POST /accounts/register/ HTTP/1.1" 200 23875
+INFO 2025-12-20 03:07:09,285 basehttp 9240 18824 "POST /accounts/register/ HTTP/1.1" 200 23875
+INFO 2025-12-20 03:09:40,460 autoreload 7316 19372 Watching for file changes with StatReloader
+INFO 2025-12-20 03:09:40,460 autoreload 7316 19372 Watching for file changes with StatReloader
+INFO 2025-12-20 03:09:47,698 basehttp 7316 16912 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:09:47,698 basehttp 7316 16912 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:09:47,769 basehttp 7316 16912 "GET / HTTP/1.1" 200 16376
+INFO 2025-12-20 03:09:47,769 basehttp 7316 16912 "GET / HTTP/1.1" 200 16376
+INFO 2025-12-20 03:09:55,256 basehttp 7316 18932 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:09:55,256 basehttp 7316 18932 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:09:55,447 basehttp 7316 18932 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:09:55,447 basehttp 7316 18932 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3699
+INFO 2025-12-20 03:10:07,354 basehttp 7316 9600 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 03:10:07,354 basehttp 7316 9600 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 03:10:32,437 basehttp 7316 9600 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 03:10:32,437 basehttp 7316 9600 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3858
+INFO 2025-12-20 03:11:30,163 basehttp 7316 4984 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 03:11:30,163 basehttp 7316 4984 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3859
+INFO 2025-12-20 03:15:47,178 autoreload 16468 11864 Watching for file changes with StatReloader
+INFO 2025-12-20 03:15:47,178 autoreload 16468 11864 Watching for file changes with StatReloader
+INFO 2025-12-20 03:16:02,993 basehttp 16468 2132 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 03:16:02,993 basehttp 16468 2132 "GET / HTTP/1.1" 200 15543
+INFO 2025-12-20 03:16:03,016 basehttp 16468 2132 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 03:16:03,016 basehttp 16468 2132 "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-12-20 03:16:13,616 basehttp 16468 3332 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:16:13,616 basehttp 16468 3332 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:16:13,652 basehttp 16468 3332 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 03:16:13,652 basehttp 16468 3332 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 03:16:19,303 basehttp 16468 3332 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 03:16:19,303 basehttp 16468 3332 "GET /accounts/register/ HTTP/1.1" 200 22196
+INFO 2025-12-20 03:16:39,324 basehttp 16468 17352 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:16:39,324 basehttp 16468 17352 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:16:39,350 basehttp 16468 17352 "GET / HTTP/1.1" 200 16378
+INFO 2025-12-20 03:16:39,350 basehttp 16468 17352 "GET / HTTP/1.1" 200 16378
+INFO 2025-12-20 03:16:42,904 basehttp 16468 8552 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:16:42,904 basehttp 16468 8552 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:16:43,038 basehttp 16468 8552 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3700
+INFO 2025-12-20 03:16:43,038 basehttp 16468 8552 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3700
+INFO 2025-12-20 03:17:16,091 basehttp 16468 3000 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3860
+INFO 2025-12-20 03:17:16,091 basehttp 16468 3000 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3860
+INFO 2025-12-20 03:19:13,573 autoreload 3824 12280 Watching for file changes with StatReloader
+INFO 2025-12-20 03:19:13,573 autoreload 3824 12280 Watching for file changes with StatReloader
+INFO 2025-12-20 03:19:27,019 basehttp 3824 13556 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:19:27,019 basehttp 3824 13556 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:19:27,123 basehttp 3824 13556 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 03:19:27,123 basehttp 3824 13556 "GET / HTTP/1.1" 200 16531
+INFO 2025-12-20 03:19:29,728 basehttp 3824 13556 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 03:19:29,728 basehttp 3824 13556 "GET /accounts/login/ HTTP/1.1" 200 17922
+INFO 2025-12-20 03:19:36,530 basehttp 3824 13556 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:19:36,530 basehttp 3824 13556 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:19:37,126 basehttp 3824 13556 "GET /admin-panel/ HTTP/1.1" 200 28170
+INFO 2025-12-20 03:19:37,126 basehttp 3824 13556 "GET /admin-panel/ HTTP/1.1" 200 28170
+INFO 2025-12-20 03:19:48,544 basehttp 3824 13556 "GET /music/tracks/ HTTP/1.1" 200 17604
+INFO 2025-12-20 03:19:48,544 basehttp 3824 13556 "GET /music/tracks/ HTTP/1.1" 200 17604
+INFO 2025-12-20 03:19:50,327 basehttp 3824 13556 "GET / HTTP/1.1" 200 15985
+INFO 2025-12-20 03:19:50,327 basehttp 3824 13556 "GET / HTTP/1.1" 200 15985
+INFO 2025-12-20 03:19:52,894 basehttp 3824 13556 "GET /music/albums/ HTTP/1.1" 200 15926
+INFO 2025-12-20 03:19:52,894 basehttp 3824 13556 "GET /music/albums/ HTTP/1.1" 200 15926
+INFO 2025-12-20 03:19:54,008 basehttp 3824 13556 "GET /movies/ HTTP/1.1" 200 21345
+INFO 2025-12-20 03:19:54,008 basehttp 3824 13556 "GET /movies/ HTTP/1.1" 200 21345
+INFO 2025-12-20 03:19:55,124 basehttp 3824 13556 "GET /music/playlists/ HTTP/1.1" 200 12158
+INFO 2025-12-20 03:19:55,124 basehttp 3824 13556 "GET /music/playlists/ HTTP/1.1" 200 12158
+INFO 2025-12-20 03:19:56,510 basehttp 3824 13556 "GET /admin-panel/ HTTP/1.1" 200 27376
+INFO 2025-12-20 03:19:56,510 basehttp 3824 13556 "GET /admin-panel/ HTTP/1.1" 200 27376
+INFO 2025-12-20 03:20:21,363 basehttp 3824 11504 "POST /admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:20:21,363 basehttp 3824 11504 "POST /admin-panel/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:20:21,435 basehttp 3824 11504 "GET /admin-panel/ HTTP/1.1" 200 29607
+INFO 2025-12-20 03:20:21,435 basehttp 3824 11504 "GET /admin-panel/ HTTP/1.1" 200 29607
+INFO 2025-12-20 03:20:25,437 basehttp 3824 11504 "GET /movies/1/edit/ HTTP/1.1" 200 13188
+INFO 2025-12-20 03:20:25,437 basehttp 3824 11504 "GET /movies/1/edit/ HTTP/1.1" 200 13188
+INFO 2025-12-20 03:20:28,175 basehttp 3824 11504 "POST /movies/1/edit/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:20:28,175 basehttp 3824 11504 "POST /movies/1/edit/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:20:28,233 basehttp 3824 11504 "GET /admin-panel/ HTTP/1.1" 200 29592
+INFO 2025-12-20 03:20:28,233 basehttp 3824 11504 "GET /admin-panel/ HTTP/1.1" 200 29592
+INFO 2025-12-20 03:20:30,087 basehttp 3824 11504 "GET /movies/1/delete/ HTTP/1.1" 200 10394
+INFO 2025-12-20 03:20:30,087 basehttp 3824 11504 "GET /movies/1/delete/ HTTP/1.1" 200 10394
+INFO 2025-12-20 03:20:31,910 basehttp 3824 11504 "POST /movies/1/delete/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:20:31,910 basehttp 3824 11504 "POST /movies/1/delete/ HTTP/1.1" 302 0
+INFO 2025-12-20 03:20:31,982 basehttp 3824 11504 "GET /admin-panel/ HTTP/1.1" 200 28171
+INFO 2025-12-20 03:20:31,982 basehttp 3824 11504 "GET /admin-panel/ HTTP/1.1" 200 28171

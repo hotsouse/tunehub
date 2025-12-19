@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Удалить трек - TuneHub{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="section-header">
+        <div>
+            <h1 class="section-title">Удалить трек</h1>
+            <p class="section-subtitle">Вы уверены, что хотите удалить этот трек?</p>
+        </div>
+        <a href="{% url 'admin_panel' %}" class="btn btn-secondary">
+            <i data-lucide="arrow-left"></i>
+            Назад
+        </a>
+    </div>
+
+    <div style="
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2rem;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    ">
+        <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--text-primary); margin-bottom: 1rem;">{{ track.title }}</h2>
+            {% if track.artists.all %}
+            <p style="color: var(--text-secondary);">
+                {% for artist in track.artists.all %}
+                    {{ artist.name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+            {% if track.album %}
+            <p style="color: var(--text-secondary);">Альбом: {{ track.album.title }}</p>
+            {% endif %}
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <button type="submit" class="btn btn-danger">
+                    <i data-lucide="trash-2"></i>
+                    Да, удалить
+                </button>
+                <a href="{% url 'admin_panel' %}" class="btn btn-secondary">
+                    Отмена
+                </a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    lucide.createIcons();
+</script>
+{% endblock %}
+

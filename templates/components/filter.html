@@ -1,0 +1,48 @@
+{# Унифицированная панель фильтров и сортировки #}
+<section class="search-sort-container">
+    <form method="get" class="search-form">
+        {% if search_name and search_placeholder %}
+            <input
+                type="text"
+                name="{{ search_name }}"
+                value="{{ search_value|default:'' }}"
+                placeholder="{{ search_placeholder }}"
+                class="search-input"
+            >
+        {% endif %}
+
+        {% if filters %}
+            {% for f in filters %}
+                <select name="{{ f.name }}" class="search-input">
+                    <option value="">{{ f.label }}</option>
+                    {% for option in f.options %}
+                        <option value="{{ option.value }}" {% if option.is_active %}selected{% endif %}>
+                            {{ option.label }}
+                        </option>
+                    {% endfor %}
+                </select>
+            {% endfor %}
+        {% endif %}
+
+        <button class="btn btn-primary" type="submit">
+            {{ submit_label|default:"Искать" }}
+        </button>
+
+        {% if reset_url %}
+            <a href="{{ reset_url }}" class="btn btn-secondary">
+                {{ reset_label|default:"Сбросить" }}
+            </a>
+        {% endif %}
+    </form>
+
+    {% if sorts %}
+        <div class="sort-options">
+            <span>Сортировать:</span>
+            {% for s in sorts %}
+                <a class="sort-btn {% if s.is_active %}active{% endif %}" href="{{ s.url }}">{{ s.label }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>
+
+

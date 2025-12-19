@@ -1,111 +1,353 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}Фильмы · Catalog{% endblock %}
+{% block title %}Фильмы - TuneHub{% endblock %}
 
 {% block content %}
-<div class="page-header">
-  <h1>Фильмы</h1>
-  <a href="/" class="btn btn-secondary">На главную</a>
-  {% if request.user.is_staff %}
-    <a href="/admin/movies/movie/add/" class="btn btn-edit">Добавить фильм</a>
-  {% endif %}
-  <a href="/admin/" class="btn btn-secondary">Админ-панель</a>
-  <a href="/movies/" class="btn btn-secondary">Сбросить фильтры</a>
-</div>
-
-<div class="search-sort-container">
-  <form method="get" class="search-form">
-    <input type="text" name="q" value="{{ search_query }}" placeholder="Поиск по названию, описанию, актёрам, режиссёрам" class="search-input">
-    <select name="genre" class="search-input">
-      <option value="">Жанр</option>
-      {% for g in genres %}
-        <option value="{{ g.name }}" {% if request.GET.genre == g.name %}selected{% endif %}>{{ g.name }}</option>
-      {% endfor %}
-    </select>
-    <select name="year" class="search-input">
-      <option value="">Год</option>
-      {% for y in years %}
-        <option value="{{ y }}" {% if request.GET.year == y|stringformat:'s' %}selected{% endif %}>{{ y }}</option>
-      {% endfor %}
-    </select>
-    <select name="min_rating" class="search-input">
-      <option value="">Рейтинг от</option>
-      {% for r in "0123456789" %}
-        {% with val=forloop.counter0 %}
-          <option value="{{ val }}" {% if request.GET.min_rating == val|stringformat:'s' %}selected{% endif %}>{{ val }}</option>
-        {% endwith %}
-      {% endfor %}
-    </select>
-    <button class="btn btn-primary" type="submit">Искать</button>
-  </form>
-
-  <div class="sort-options">
-    <span>Сортировать:</span>
-    <a class="sort-btn {% if request.GET.sort == 'title' %}active{% endif %}" href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=title">A→Z</a>
-    <a class="sort-btn {% if request.GET.sort == '-title' %}active{% endif %}" href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=-title">Z→A</a>
-    <a class="sort-btn {% if request.GET.sort == '-release_year' or not request.GET.sort %}active{% endif %}" href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=-release_year">Новые</a>
-    <a class="sort-btn {% if request.GET.sort == 'release_year' %}active{% endif %}" href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=release_year">Старые</a>
-    <a class="sort-btn {% if request.GET.sort == '-rating' %}active{% endif %}" href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=-rating">Рейтинг</a>
-  </div>
-</div>
-
-{% if page_obj.object_list %}
-  <div class="grid">
-    {% for m in page_obj.object_list %}
-      <div class="card">
-        <div class="card-header">
-          <h3>{{ m.title }}</h3>
-          <div class="card-badges">
-            <span class="year">{{ m.release_year }}</span>
-            {% if request.user.is_authenticated and m in request.user.favorite_movies.all %}
-              <span class="favorite-badge">В избранном</span>
+<section class="section">
+    <div class="section-header">
+        <div>
+            <h1 class="section-title">Фильмы</h1>
+            <p class="section-subtitle">Исследуйте нашу коллекцию фильмов</p>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            {% if user.is_staff %}
+            <button onclick="toggleForm('addMovieForm')" class="btn btn-primary">
+                <i data-lucide="plus"></i>
+                Добавить фильм
+            </button>
             {% endif %}
-          </div>
+            <a href="{% url 'home' %}" class="btn btn-secondary">
+                <i data-lucide="home"></i>
+                На главную
+            </a>
         </div>
-        <div class="card-body">
-          <p><strong>Жанры:</strong> {{ m.genres.all|join:", " }}</p>
-          <p><strong>Режиссёры:</strong> {{ m.directors.all|join:", " }}</p>
-          <p><strong>Актёры:</strong> {{ m.actors.all|join:", " }}</p>
-          <p class="description">{{ m.description|truncatewords:30 }}</p>
+    </div>
+    
+    <!-- Add Movie Form (Admin Only) -->
+    {% if user.is_staff %}
+    <div id="addMovieForm" style="display: none; margin-bottom: 2rem; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px;">
+        <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Добавить новый фильм</h3>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="form_type" value="add_movie">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                {% for field in movie_form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}" class="form-label">
+                        {{ field.label }}
+                        {% if field.field.required %}<span style="color: #EF4444;">*</span>{% endif %}
+                    </label>
+                    {% if field.field.widget|stringformat:"s" == "CheckboxSelectMultiple" %}
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.5rem; margin-top: 0.5rem;">
+                        {{ field }}
+                    </div>
+                    {% else %}
+                    {{ field }}
+                    {% endif %}
+                    {% for error in field.errors %}
+                    <div style="color: #EF4444; font-size: 0.875rem; margin-top: 0.25rem;">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <button type="button" onclick="toggleForm('addMovieForm')" class="btn btn-secondary">Отмена</button>
+            </div>
+        </form>
+    </div>
+    {% endif %}
+    </div>
+    
+    <!-- Filters and Search -->
+    <div style="
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+    ">
+        <form method="get" action="{% url 'movies:movie_list' %}">
+            <div class="grid grid-4" style="gap: 1rem; margin-bottom: 1rem;">
+                <!-- Search -->
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label" for="q">
+                        <i data-lucide="search" style="width: 16px; height: 16px;"></i>
+                        Поиск
+                    </label>
+                    <input 
+                        type="text" 
+                        id="q" 
+                        name="q" 
+                        class="form-input" 
+                        placeholder="Название, описание, актёры..."
+                        value="{{ search_query }}"
+                    >
+                </div>
+                
+                <!-- Genre Filter -->
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label" for="genre">
+                        <i data-lucide="film" style="width: 16px; height: 16px;"></i>
+                        Жанр
+                    </label>
+                    <select id="genre" name="genre" class="form-input">
+                        <option value="">Все жанры</option>
+                        {% for g in genres %}
+                            <option value="{{ g.name }}" {% if request.GET.genre == g.name %}selected{% endif %}>
+                                {{ g.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <!-- Year Filter -->
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label" for="year">
+                        <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
+                        Год
+                    </label>
+                    <select id="year" name="year" class="form-input">
+                        <option value="">Все годы</option>
+                        {% for y in years %}
+                            <option value="{{ y }}" {% if request.GET.year == y|stringformat:'s' %}selected{% endif %}>
+                                {{ y }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <!-- Rating Filter -->
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label" for="min_rating">
+                        <i data-lucide="star" style="width: 16px; height: 16px;"></i>
+                        Рейтинг от
+                    </label>
+                    <select id="min_rating" name="min_rating" class="form-input">
+                        <option value="">Любой</option>
+                        {% for r in "0123456789" %}
+                            {% with val=forloop.counter0 %}
+                                <option value="{{ val }}" {% if request.GET.min_rating == val|stringformat:'s' %}selected{% endif %}>
+                                    {{ val }}+
+                                </option>
+                            {% endwith %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Sort Options -->
+            <div style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--border);
+            ">
+                <div class="sort-options">
+                    <span style="color: var(--text-secondary); font-weight: 600; margin-right: 0.5rem;">Сортировать:</span>
+                    <a href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=title" 
+                       class="sort-btn {% if request.GET.sort == 'title' %}active{% endif %}">
+                        A→Z
+                    </a>
+                    <a href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=-title" 
+                       class="sort-btn {% if request.GET.sort == '-title' %}active{% endif %}">
+                        Z→A
+                    </a>
+                    <a href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=-release_year" 
+                       class="sort-btn {% if request.GET.sort == '-release_year' or not request.GET.sort %}active{% endif %}">
+                        Новые
+                    </a>
+                    <a href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=release_year" 
+                       class="sort-btn {% if request.GET.sort == 'release_year' %}active{% endif %}">
+                        Старые
+                    </a>
+                    <a href="?{% if request.GET %}{{ request.GET.urlencode|cut:'sort='|cut:'&&' }}&{% endif %}sort=-rating" 
+                       class="sort-btn {% if request.GET.sort == '-rating' %}active{% endif %}">
+                        Рейтинг
+                    </a>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem;">
+                    <button type="submit" class="btn btn-primary">
+                        <i data-lucide="filter"></i>
+                        Применить
+                    </button>
+                    <a href="{% url 'movies:movie_list' %}" class="btn btn-secondary">
+                        <i data-lucide="x"></i>
+                        Сбросить
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Movie Count -->
+    <div style="margin-bottom: 2rem; color: var(--text-secondary);">
+        Найдено фильмов: <strong style="color: var(--primary);">{{ page_obj.paginator.count }}</strong>
+    </div>
+    
+    <!-- Movies Grid -->
+    {% if page_obj.object_list %}
+        <div class="grid grid-4">
+            {% for movie in page_obj.object_list %}
+                <div class="card">
+                    <div class="card-image" style="aspect-ratio: 2/3; background: var(--gradient-primary);">
+                        {% if movie.poster %}
+                            <img src="{{ movie.poster.url }}" alt="{{ movie.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {% else %}
+                            <div style="
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            ">
+                                <i data-lucide="film" style="width: 60px; height: 60px; color: white; opacity: 0.5;"></i>
+                            </div>
+                        {% endif %}
+                        
+                        <div class="card-overlay">
+                            <a href="{% url 'movies:movie_detail' movie.id %}" class="play-btn">
+                                <i data-lucide="play" style="width: 24px; height: 24px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h3 class="card-title" style="flex: 1; margin-right: 0.5rem;">
+                                <a href="{% url 'movies:movie_detail' movie.id %}" style="color: inherit; text-decoration: none;">
+                                    {{ movie.title }}
+                                </a>
+                            </h3>
+                            <span class="year">{{ movie.release_year }}</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <i data-lucide="star" style="width: 16px; height: 16px; color: #F59E0B;"></i>
+                            <span style="color: var(--text-primary); font-weight: 600;">{{ movie.rating|floatformat:1 }}</span>
+                        </div>
+                        
+                        <p class="card-subtitle" style="margin-bottom: 0.75rem;">
+                            <strong>Жанры:</strong> {{ movie.genres.all|join:", "|truncatewords:5 }}
+                        </p>
+                        
+                        <p style="
+                            color: var(--text-secondary);
+                            font-size: 0.875rem;
+                            margin-bottom: 1rem;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        ">
+                            {{ movie.description|truncatewords:20 }}
+                        </p>
+                        
+                        <div class="card-actions" style="padding: 0; border: none; margin-top: 1rem;">
+                            <a href="{% url 'movies:movie_detail' movie.id %}" class="btn btn-primary" style="flex: 1;">
+                                <i data-lucide="eye"></i>
+                                Подробнее
+                            </a>
+                            {% if user.is_authenticated %}
+                                <form method="post" action="{% url 'movies:movie_favorite' movie.id %}" style="display: inline; margin: 0;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-secondary" style="
+                                        color: {% if movie in user.favorite_movies.all %}var(--secondary){% else %}var(--text-primary){% endif %};
+                                    ">
+                                        <i data-lucide="{% if movie in user.favorite_movies.all %}heart{% else %}heart{% endif %}" 
+                                           style="fill: {% if movie in user.favorite_movies.all %}currentColor{% else %}none{% endif %};"></i>
+                                    </button>
+                                </form>
+                            {% endif %}
+                            {% if user.is_staff %}
+                            <a href="{% url 'movies:delete_movie' movie.id %}" 
+                               class="btn btn-danger" 
+                               style="padding: 0.5rem; min-width: auto;"
+                               onclick="return confirm('Удалить фильм \"{{ movie.title }}\"?')">
+                                <i data-lucide="trash-2" style="width: 16px; height: 16px;"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-        <div class="card-actions">
-          <a class="btn btn-secondary" href="/movies/{{ m.id }}/">Подробнее</a>
-          {% if request.user.is_authenticated %}
-            <form method="post" action="/movies/{{ m.id }}/favorite/" style="display:inline;">
-              {% csrf_token %}
-              <button class="btn btn-favorite" type="submit">
-                {% if m in request.user.favorite_movies.all %}Убрать из избранного{% else %}В избранное{% endif %}
-              </button>
-            </form>
-          {% endif %}
-          {% if request.user.is_staff %}
-            <a class="btn btn-edit" href="/movies/{{ m.id }}/edit/">Редактировать</a>
-            <a class="btn btn-danger" href="/movies/{{ m.id }}/delete/">Удалить</a>
-          {% endif %}
+    {% else %}
+        <div class="empty-state">
+            <i data-lucide="film-off" style="width: 80px; height: 80px;"></i>
+            <h3>Фильмы не найдены</h3>
+            <p>Попробуйте изменить параметры поиска или фильтры</p>
+            <a href="{% url 'movies:movie_list' %}" class="btn btn-primary" style="margin-top: 1rem;">
+                <i data-lucide="refresh-cw"></i>
+                Сбросить фильтры
+            </a>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-{% else %}
-  <div class="empty-state">
-    <h3>Ничего не найдено</h3>
-    <p>Попробуйте изменить условия поиска</p>
-  </div>
-{% endif %}
+    {% endif %}
+    
+    <!-- Pagination -->
+    {% if page_obj.has_other_pages %}
+        <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+        ">
+            {% if page_obj.has_previous %}
+                <a href="?page=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.year %}&year={{ request.GET.year }}{% endif %}{% if request.GET.min_rating %}&min_rating={{ request.GET.min_rating }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}" 
+                   class="btn btn-secondary">
+                    <i data-lucide="chevrons-left"></i>
+                </a>
+                <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.year %}&year={{ request.GET.year }}{% endif %}{% if request.GET.min_rating %}&min_rating={{ request.GET.min_rating }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}" 
+                   class="btn btn-secondary">
+                    <i data-lucide="chevron-left"></i>
+                </a>
+            {% endif %}
+            
+            <span style="
+                padding: 0.75rem 1.5rem;
+                background: var(--bg-secondary);
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                color: var(--text-primary);
+                font-weight: 600;
+            ">
+                Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+            </span>
+            
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.year %}&year={{ request.GET.year }}{% endif %}{% if request.GET.min_rating %}&min_rating={{ request.GET.min_rating }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}" 
+                   class="btn btn-secondary">
+                    <i data-lucide="chevron-right"></i>
+                </a>
+                <a href="?page={{ page_obj.paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.year %}&year={{ request.GET.year }}{% endif %}{% if request.GET.min_rating %}&min_rating={{ request.GET.min_rating }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}" 
+                   class="btn btn-secondary">
+                    <i data-lucide="chevrons-right"></i>
+                </a>
+            {% endif %}
+        </div>
+    {% endif %}
+</section>
 
-<nav class="mt-4">
-  <ul class="pagination">
-    {% if page_obj.has_previous %}
-      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Назад</a></li>
-    {% endif %}
-    <li class="page-item disabled"><span class="page-link">Стр. {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span></li>
-    {% if page_obj.has_next %}
-      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Вперёд</a></li>
-    {% endif %}
-  </ul>
-  <div class="text-muted small">Найдено: {{ page_obj.paginator.count }}</div>
-  <div class="text-muted small">Текущая дата: {% now "Y-m-d H:i" %}</div>
-</nav>
+<script>
+    lucide.createIcons();
+    
+    // Toggle form visibility
+    function toggleForm(formId) {
+        const form = document.getElementById(formId);
+        if (form.style.display === 'none' || form.style.display === '') {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+    }
+</script>
 {% endblock %}
-
-

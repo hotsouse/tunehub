@@ -1,36 +1,253 @@
-﻿{% extends "base.html" %}
+﻿{% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Home · Movie & Music Catalog{% endblock %}
+{% block title %}TuneHub - Добро пожаловать в мир музыки{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero-section">
-    <div class="text-center">
-        <h1 class="hero-title">Добро пожаловать в Медиатеку</h1>
-        <p class="hero-subtitle">Ищите, просматривайте и собирайте избранное в едином месте</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-            <a href="/movies/" class="btn-primary-glass">🎬 Смотреть фильмы</a>
-            <a href="/music/" class="btn-secondary-glass">🎵 Слушать музыку</a>
-            {% if request.user.is_authenticated %}
-                <a href="/admin/" class="btn-glass">⚙️ Админ панель</a>
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i data-lucide="sparkles"></i>
+            <span>Новое поколение музыкального каталога</span>
+        </div>
+        
+        <h1>Ваша музыка.<br>Ваши эмоции.</h1>
+        
+        <p>
+            Исследуйте миллионы треков, создавайте плейлисты, делитесь музыкой с друзьями.
+            TuneHub - это больше, чем просто каталог.
+        </p>
+        
+        <div class="hero-actions">
+            {% if user.is_authenticated %}
+                <a href="{% url 'music:track_list' %}" class="btn btn-primary">
+                    <i data-lucide="music"></i>
+                    Слушать музыку
+                </a>
+                <a href="{% url 'music:playlist_list' %}" class="btn btn-secondary">
+                    <i data-lucide="list-music"></i>
+                    Мои плейлисты
+                </a>
+            {% else %}
+                <a href="{% url 'accounts:register' %}" class="btn btn-primary">
+                    <i data-lucide="user-plus"></i>
+                    Начать бесплатно
+                </a>
+                <a href="{% url 'accounts:login' %}" class="btn btn-outline">
+                    <i data-lucide="log-in"></i>
+                    Войти
+                </a>
             {% endif %}
         </div>
     </div>
 </section>
 
 <!-- Features Section -->
-<div class="features">
-    <div class="feature-card">
-        <h3>🎬 Умный каталог фильмов</h3>
-        <p>Фильтры, сортировка, рейтинги и быстрое редактирование.</p>
+<section class="section">
+    <div class="section-header">
+        <div>
+            <h2 class="section-title">Возможности</h2>
+            <p class="section-subtitle">Все что нужно для идеального музыкального опыта</p>
+        </div>
     </div>
-    <div class="feature-card">
-        <h3>🎵 Библиотека музыки</h3>
-        <p>Треки, альбомы, жанры и артисты в удобном интерфейсе.</p>
+    
+    <div class="grid grid-3">
+        <!-- Feature 1 -->
+        <div class="card feature-card">
+            <div class="card-content feature-card-content">
+                <div class="feature-icon feature-icon-primary">
+                    <i data-lucide="music"></i>
+                </div>
+                <h3 class="card-title">Огромная библиотека</h3>
+                <p class="card-subtitle">Миллионы треков всех жанров и направлений. Находите любимую музыку и открывайте новое.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="card feature-card">
+            <div class="card-content feature-card-content">
+                <div class="feature-icon feature-icon-secondary">
+                    <i data-lucide="list-music"></i>
+                </div>
+                <h3 class="card-title">Персональные плейлисты</h3>
+                <p class="card-subtitle">Создавайте собственные коллекции треков и делитесь ими с друзьями.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="card feature-card">
+            <div class="card-content feature-card-content">
+                <div class="feature-icon feature-icon-accent">
+                    <i data-lucide="heart"></i>
+                </div>
+                <h3 class="card-title">Избранное</h3>
+                <p class="card-subtitle">Сохраняйте любимые треки и альбомы для быстрого доступа в любое время.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="card feature-card">
+            <div class="card-content feature-card-content">
+                <div class="feature-icon feature-icon-success">
+                    <i data-lucide="search"></i>
+                </div>
+                <h3 class="card-title">Умный поиск</h3>
+                <p class="card-subtitle">Находите музыку по названию, исполнителю, альбому или жанру моментально.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="card feature-card">
+            <div class="card-content feature-card-content">
+                <div class="feature-icon feature-icon-purple">
+                    <i data-lucide="filter"></i>
+                </div>
+                <h3 class="card-title">Фильтры</h3>
+                <p class="card-subtitle">Сортируйте треки по жанрам, годам, популярности и другим параметрам.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="card feature-card">
+            <div class="card-content feature-card-content">
+                <div class="feature-icon feature-icon-pink">
+                    <i data-lucide="film"></i>
+                </div>
+                <h3 class="card-title">Фильмы</h3>
+                <p class="card-subtitle">Не только музыка - смотрите фильмы, оставляйте отзывы и оценки.</p>
+            </div>
+        </div>
     </div>
-    <div class="feature-card">
-        <h3>⭐ Избранное</h3>
-        <p>Добавляйте любимое в один клик и возвращайтесь позже.</p>
+</section>
+
+<!-- Popular Tracks Section -->
+<section class="section" style="background: var(--bg-secondary);">
+    <div class="section-header">
+        <div>
+            <h2 class="section-title">Популярные треки</h2>
+            <p class="section-subtitle">Самые прослушиваемые треки прямо сейчас</p>
+        </div>
+        <a href="{% url 'music:track_list' %}" class="btn btn-outline">
+            Смотреть все
+            <i data-lucide="arrow-right"></i>
+        </a>
     </div>
-</div>
+    
+    <div class="grid grid-5">
+        {% for track in popular_tracks %}
+        <div class="card">
+            <div class="card-image">
+                {% if track.album.cover %}
+                    <img src="{{ track.album.cover.url }}" alt="{{ track.title }}">
+                {% else %}
+                    <div class="card-image-placeholder">
+                        <i data-lucide="music"></i>
+                    </div>
+                {% endif %}
+                
+                <div class="card-overlay">
+                    <button class="play-btn" onclick="playTrack({{ track.id }})">
+                        <i data-lucide="play"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card-content">
+                <h3 class="card-title">
+                    <a href="{% url 'music:track_detail' track.id %}" class="card-title-link">
+                        {{ track.title }}
+                    </a>
+                </h3>
+                <p class="card-subtitle">{% if track.album.artist %}{{ track.album.artist.name }}{% elif track.artists.all %}{{ track.artists.first.name }}{% else %}Неизвестный артист{% endif %}</p>
+                
+                <div class="card-meta">
+                    <span class="card-meta-item">
+                        <i data-lucide="clock"></i>
+                        {{ track.duration }}
+                    </span>
+                    {% if user.is_authenticated %}
+                        <button onclick="toggleFavorite({{ track.id }}, this)" class="favorite-btn">
+                            <i data-lucide="heart"></i>
+                        </button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="empty-state">
+            <i data-lucide="music"></i>
+            <p>Треки пока не добавлены</p>
+            {% if user.is_staff %}
+                <a href="{% url 'admin:music_track_add' %}" class="btn btn-primary">
+                    <i data-lucide="plus"></i>
+                    Добавить треки
+                </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Call to Action -->
+{% if not user.is_authenticated %}
+<section class="section">
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Готовы начать?</h2>
+            <p class="cta-subtitle">
+                Присоединяйтесь к тысячам пользователей TuneHub уже сегодня
+            </p>
+            <a href="{% url 'accounts:register' %}" class="btn cta-button">
+                <i data-lucide="user-plus"></i>
+                Создать аккаунт бесплатно
+            </a>
+        </div>
+        
+        <!-- Decorative circles -->
+        <div class="cta-circle cta-circle-1"></div>
+        <div class="cta-circle cta-circle-2"></div>
+    </div>
+</section>
+{% endif %}
+
+<script>
+    // Initialize icons
+    lucide.createIcons();
+    
+    // Play track function
+    function playTrack(trackId) {
+        window.location.href = `/music/tracks/${trackId}/`;
+    }
+    
+    // Toggle favorite function
+    function toggleFavorite(trackId, buttonElement) {
+        const button = buttonElement || event.target.closest('button');
+        fetch(`/api/tracks/${trackId}/toggle_favorite/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (button) {
+                const icon = button.querySelector('i');
+                if (data.is_favorited) {
+                    button.style.color = 'var(--secondary)';
+                    if (icon) icon.style.fill = 'currentColor';
+                } else {
+                    button.style.color = 'var(--text-muted)';
+                    if (icon) icon.style.fill = 'none';
+                }
+                lucide.createIcons();
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Произошла ошибка. Попробуйте еще раз.');
+        });
+    }
+</script>
 {% endblock %}

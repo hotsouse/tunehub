@@ -1,0 +1,50 @@
+{# Универсальная карточка медиа-контента #}
+<article class="media-card {{ kind|default:'' }}">
+    {% if poster_url %}
+        <div class="media-card-poster-wrap">
+            <img src="{{ poster_url }}" alt="{{ title }}" class="media-card-poster">
+        </div>
+    {% endif %}
+
+    <div class="media-card-content">
+        <h3 class="media-card-title">{{ title }}</h3>
+
+        {% if subtitle %}
+            <p class="media-card-subtitle">{{ subtitle }}</p>
+        {% endif %}
+
+        <div class="media-card-meta-row">
+            {% if year %}
+                <span class="media-card-year">{{ year }}</span>
+            {% endif %}
+
+            {% if rating %}
+                <span class="media-card-rating">⭐ {{ rating }}</span>
+            {% endif %}
+
+            {% if badge %}
+                <span class="media-card-badge">{{ badge }}</span>
+            {% endif %}
+        </div>
+
+        {% if genres %}
+            <div class="media-card-genres">
+                {% for g in genres %}
+                    <span class="genre-tag">{{ g }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if description %}
+            <p class="media-card-description">{{ description }}</p>
+        {% endif %}
+
+        {% if actions %}
+            <div class="media-card-actions">
+                {{ actions }}
+            </div>
+        {% endif %}
+    </div>
+</article>
+
+

@@ -10,6 +10,17 @@ from .forms import ReviewForm, MovieForm
 def movie_list(request):
     movies = Movie.objects.all()
     
+    # Handle form submission for adding movies (admin only)
+    movie_form = MovieForm()
+    if request.method == 'POST' and request.user.is_staff:
+        form_type = request.POST.get('form_type')
+        if form_type == 'add_movie':
+            movie_form = MovieForm(request.POST)
+            if movie_form.is_valid():
+                movie = movie_form.save()
+                messages.success(request, f'Фильм "{movie.title}" успешно добавлен!')
+                return redirect('movies:movie_list')
+    
     # Search
     query = request.GET.get('q')
     if query:
@@ -51,6 +62,7 @@ def movie_list(request):
         'genres': genres,
         'years': years,
         'search_query': query or '',
+        'movie_form': movie_form,
     }
     return render(request, 'movies/movie_list.html', context)
 
@@ -113,7 +125,7 @@ def add_movie(request):
         if form.is_valid():
             movie = form.save()
             messages.success(request, f'Фильм "{movie.title}" успешно добавлен!')
-            return redirect('movie_detail', movie_id=movie.id)
+            return redirect('admin_panel')
     else:
         form = MovieForm()
     
@@ -128,7 +140,7 @@ def edit_movie(request, movie_id):
         if form.is_valid():
             form.save()
             messages.success(request, f'Фильм "{movie.title}" обновлен!')
-            return redirect('movie_detail', movie_id=movie.id)
+            return redirect('admin_panel')
     else:
         form = MovieForm(instance=movie)
     
@@ -142,6 +154,6 @@ def delete_movie(request, movie_id):
         title = movie.title
         movie.delete()
         messages.success(request, f'Фильм "{title}" удален!')
-        return redirect('movie_list')
+        return redirect('admin_panel')
     
     return render(request, 'movies/delete_movie.html', {'movie': movie})

@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ track.title }} - TuneHub{% endblock %}
+
+{% block content %}
+<section class="section">
+    <!-- Back Button -->
+    <div style="margin-bottom: 2rem;">
+        <a href="{% url 'music:track_list' %}" class="btn btn-secondary">
+            <i data-lucide="arrow-left"></i>
+            Назад к трекам
+        </a>
+    </div>
+    
+    <!-- Track Header -->
+    <div style="
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 3rem;
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 3rem;
+        align-items: start;
+    ">
+        <!-- Album Cover -->
+        <div style="
+            aspect-ratio: 1;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--gradient-primary);
+            box-shadow: var(--shadow-lg);
+        ">
+            {% if track.album.cover %}
+                <img src="{{ track.album.cover.url }}" alt="{{ track.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+            {% else %}
+                <div style="
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                ">
+                    <i data-lucide="music" style="width: 80px; height: 80px; color: white; opacity: 0.5;"></i>
+                </div>
+            {% endif %}
+        </div>
+        
+        <!-- Info -->
+        <div>
+            <h1 style="
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 0.5rem;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            ">
+                {{ track.title }}
+            </h1>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <p style="
+                    font-size: 1.25rem;
+                    color: var(--text-secondary);
+                    margin-bottom: 0.5rem;
+                ">
+                    <i data-lucide="user" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 0.5rem;"></i>
+                    <strong style="color: var(--text-primary);">{% if track.album.artist %}{{ track.album.artist.name }}{% elif track.artists.all %}{{ track.artists.first.name }}{% else %}Неизвестный артист{% endif %}</strong>
+                </p>
+                
+                {% if track.album %}
+                    <p style="
+                        font-size: 1rem;
+                        color: var(--text-secondary);
+                        margin-bottom: 0.5rem;
+                    ">
+                        <i data-lucide="disc" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 0.5rem;"></i>
+                        Альбом: 
+                        <a href="{% url 'music:album_detail' track.album.id %}" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                            {{ track.album.title }}
+                        </a>
+                    </p>
+                {% endif %}
+                
+                <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                    <span style="color: var(--text-muted);">
+                        <i data-lucide="clock" style="width: 16px; height: 16px; vertical-align: middle;"></i>
+                        {{ track.duration }}
+                    </span>
+                    {% if track.album.release_year %}
+                        <span class="year">{{ track.album.release_year }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Genres -->
+            {% if track.album.genres.all %}
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        {% for genre in track.album.genres.all %}
+                            <span class="badge">{{ genre.name }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            
+            <!-- Actions -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                {% if user.is_authenticated %}
+                    <button 
+                        onclick="toggleFavorite({{ track.id }}, this)" 
+                        class="btn {% if is_favorited %}btn-secondary{% else %}btn-primary{% endif %}"
+                        id="favoriteBtn"
+                    >
+                        <i data-lucide="heart" style="{% if is_favorited %}fill: currentColor;{% endif %}"></i>
+                        {% if is_favorited %}В избранном{% else %}В избранное{% endif %}
+                    </button>
+                {% endif %}
+                
+                {% if track.album %}
+                    <a href="{% url 'music:album_detail' track.album.id %}" class="btn btn-secondary">
+                        <i data-lucide="disc"></i>
+                        Открыть альбом
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Similar Tracks -->
+    {% if track.album %}
+        <div>
+            <h2 style="
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 2rem;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            ">
+                <i data-lucide="list-music" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 0.5rem;"></i>
+                Другие треки из альбома
+            </h2>
+            
+            <div class="grid grid-5">
+                {% for other_track in track.album.tracks.all|slice:":5" %}
+                    {% if other_track.id != track.id %}
+                        <div class="card">
+                            <div class="card-image">
+                                {% if track.album.cover %}
+                                    <img src="{{ track.album.cover.url }}" alt="{{ other_track.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                                {% else %}
+                                    <div class="card-image-placeholder">
+                                        <i data-lucide="music"></i>
+                                    </div>
+                                {% endif %}
+                                
+                                <div class="card-overlay">
+                                    <a href="{% url 'music:track_detail' other_track.id %}" class="play-btn">
+                                        <i data-lucide="play"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <h3 class="card-title">
+                                    <a href="{% url 'music:track_detail' other_track.id %}" class="card-title-link">
+                                        {{ other_track.title }}
+                                    </a>
+                                </h3>
+                                <p class="card-subtitle">{% if other_track.album.artist %}{{ other_track.album.artist.name }}{% elif other_track.artists.all %}{{ other_track.artists.first.name }}{% else %}Неизвестный артист{% endif %}</p>
+                                
+                                <div class="card-meta">
+                                    <span class="card-meta-item">
+                                        <i data-lucide="clock"></i>
+                                        {{ other_track.duration }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</section>
+
+<script>
+    lucide.createIcons();
+    
+    // Toggle favorite function
+    function toggleFavorite(trackId, button) {
+        fetch(`/api/tracks/${trackId}/toggle_favorite/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const icon = button.querySelector('i');
+            if (data.is_favorited) {
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-secondary');
+                button.innerHTML = '<i data-lucide="heart" style="fill: currentColor;"></i> В избранном';
+                icon.style.fill = 'currentColor';
+            } else {
+                button.classList.remove('btn-secondary');
+                button.classList.add('btn-primary');
+                button.innerHTML = '<i data-lucide="heart"></i> В избранное';
+                icon.style.fill = 'none';
+            }
+            lucide.createIcons();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Произошла ошибка. Пожалуйста, войдите в систему.');
+        });
+    }
+</script>
+{% endblock %}
+
